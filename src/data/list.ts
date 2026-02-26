@@ -440,6 +440,13 @@ const designEngineers: DesignEngineers = [
     website: 'https://www.mikeharmer.com/',
     x: 'https://x.com/mikeharmer',
   },
+  {
+    definition:
+      'Design engineering is removing the abstraction between the idea of the thing and the thing itself. It binds together the creative act of exploration and the technical discipline of making something real.',
+    github: 'https://github.com/heymynameisrob',
+    name: 'Rob Hough',
+    website: 'https://heymynameisrob.com/',    
+  },
 ];
 
 export const list = designEngineers
