@@ -8,11 +8,12 @@ interface Props {
 }
 
 const title = Astro.props.title
-  ? `${Astro.props.title} — D.E.`
-  : 'D.E.: Directory of Design Engineers';
+  ? `${Astro.props.title} — DesEngs`
+  : 'DesEngs: Resources for Design Engineers';
 
 const description =
-  Astro.props.description || 'A curated list of exceptional design engineers.';
+  Astro.props.description ||
+  'A curated collection of design engineering resources.';
 
 const og = Astro.props.og || '/og.png';
 ---
@@ -32,10 +33,10 @@ const og = Astro.props.og || '/og.png';
 
     <meta content={title} property="og:title" />
     <meta content={description} property="og:description" />
-    <meta content="D.E." property="og:site_name" />
-    <meta content="https://designengineers.net/" property="og:url" />
+    <meta content="DesEngs" property="og:site_name" />
+    <meta content="https://desengs.com/" property="og:url" />
     <meta content="website" property="og:type" />
-    <meta content={`https://designengineers.net${og}`} property="og:image" />
+    <meta content={`https://desengs.com${og}`} property="og:image" />
 
     <link href="/sitemap-index.xml" rel="sitemap" />
   </head>

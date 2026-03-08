@@ -1,0 +1,20 @@
+<div class="spacer"></div>
+
+<style>
+  .spacer {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    width: 100%;
+    height: 12px;
+    background-image: repeating-linear-gradient(
+      315deg,
+      var(--color-neutral-200) 0,
+      var(--color-neutral-200) 1px,
+      transparent 0,
+      transparent 50%
+    );
+    background-size: 10px 10px;
+    mask-image: linear-gradient(90deg, #000, transparent);
+  }
+</style>

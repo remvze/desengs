@@ -1,0 +1,183 @@
+<div class="lines">
+  <div class="straight one"></div>
+  <div class="straight two"></div>
+  <div class="circle one"></div>
+  <div class="circle two"></div>
+  <div class="outer"></div>
+</div>
+
+<style>
+  .lines {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    background: rgb(24 24 27 / 40%);
+    border: 1px solid var(--color-neutral-200);
+    border-radius: 50%;
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+    animation-name: rotate;
+    animation-duration: 180s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    &::before {
+      position: absolute;
+      inset: 50px;
+      content: '';
+      background: var(--color-neutral-50);
+      border: 1px dashed var(--color-neutral-200);
+      border-radius: 50%;
+    }
+
+    &::after {
+      position: absolute;
+      inset: -50px;
+      content: '';
+      border: 1px dashed var(--color-neutral-200);
+      border-radius: 50%;
+    }
+
+    & .straight.one {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 350px;
+      border: 1px solid var(--color-neutral-200);
+      transform: translate(-50%, -50%);
+      animation-name: rotate;
+      animation-duration: 120s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: reverse;
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 450px;
+        height: 0;
+        content: '';
+        border: 1px dashed var(--color-neutral-200);
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+
+    & .straight.two {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 350px;
+      border: 1px solid var(--color-neutral-200);
+      transform: translate(-50%, -50%);
+      animation-name: rotate;
+      animation-duration: 120s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: reverse;
+    }
+
+    & .circle.one {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--color-neutral-200);
+      border-radius: 50%;
+      transform: translateX(-50%);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        border: inherit;
+        border-radius: 50%;
+        transform: translateX(100%);
+      }
+    }
+
+    & .circle.two {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--color-neutral-200);
+      border-radius: 50%;
+      transform: translateY(-50%);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        border: inherit;
+        border-radius: 50%;
+        transform: translateY(100%);
+      }
+    }
+
+    & .outer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -100;
+      width: 700px;
+      height: 700px;
+      border: 1px solid var(--color-neutral-200);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+
+      &::before {
+        position: absolute;
+        inset: -50px;
+        content: '';
+        background-color: var(--color-neutral-50);
+        background-image: repeating-linear-gradient(
+          45deg,
+          var(--color-neutral-200) 0,
+          var(--color-neutral-200) 1px,
+          var(--color-neutral-50) 0,
+          var(--color-neutral-50) 50%
+        );
+        background-size: 10px 10px;
+        border: 1px dashed var(--color-neutral-200);
+        border-radius: 50%;
+        opacity: 0.8;
+        mask-image: radial-gradient(
+          circle at center center,
+          transparent 350px,
+          #000 35px
+        );
+      }
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+</style>

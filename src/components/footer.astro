@@ -1,0 +1,33 @@
+<footer class="footer">
+  <p class="curator">
+    <span>—</span> Curated by <a href="https://x.com/remvze">Maze Heart</a>
+  </p>
+</footer>
+
+<style>
+  .footer {
+    padding: 50px 0;
+
+    & .curator {
+      font-family: var(--font-mono);
+      font-size: var(--font-2xsm);
+      font-weight: 500;
+      color: var(--color-foreground-subtler);
+      text-transform: uppercase;
+
+      & span {
+        color: var(--color-foreground);
+      }
+
+      & a {
+        color: var(--color-foreground-subtle);
+        text-decoration: none;
+        transition: 0.2s;
+
+        &:hover {
+          color: var(--color-foreground);
+        }
+      }
+    }
+  }
+</style>

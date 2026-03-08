@@ -2,13 +2,18 @@
 import Layout from '@/layouts/layout.astro';
 import { Container } from '@/components/container';
 import Hero from '@/components/hero.astro';
-import List from '@/components/list.astro';
-import { list } from '@/data/list';
+import { Resources } from '@/components/resources';
+import { resources } from '@/data/resources';
+import Spacer from '@/components/spacer.astro';
+import Footer from '@/components/footer.astro';
 ---
 
 <Layout>
+  <Hero />
   <Container>
-    <Hero />
-    <List list={list} />
+    <Spacer />
+    <Resources client:load resources={resources} />
+    <Spacer />
+    <Footer />
   </Container>
 </Layout>

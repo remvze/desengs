@@ -1,0 +1,38 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  column-gap: 1px;
+  align-items: baseline;
+  padding: 0;
+  font-size: var(--font-xsm);
+  font-weight: 500px;
+  color: var(--color-foreground-subtler);
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  background: var(--color-neutral-50);
+  border: none;
+  transition: 0.2s;
+
+  &:hover {
+    color: var(--color-foreground-subtle);
+
+    & div {
+      & span {
+        color: var(--color-foreground);
+        transform: translateY(-100%);
+      }
+    }
+  }
+
+  & div {
+    height: 1rem;
+    overflow: hidden;
+
+    & span {
+      display: block;
+      color: var(--color-foreground-subtle);
+      transition: 0.3s;
+    }
+  }
+}

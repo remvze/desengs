@@ -1,80 +1,72 @@
-<section class="hero">
-  <h1>D.E.</h1>
-  <p class="desc">Curated list of Design Engineers.</p>
-  <p class="curator">
-    Created by <a href="https://x.com/remvze">Maze Heart</a>.
-  </p>
-  <div class="source">
-    <a href="https://github.com/remvze/de" rel="noreferrer" target="_blank">
-      Source Code</a
-    >
-  </div>
-</section>
+---
+import { Container } from './container';
+import Lines from './lines.astro';
+import { Logo } from './logo';
+import { ShinyText } from './shiny-text';
+import { Link } from './link';
+---
+
+<div class="hidden">
+  <Container>
+    <section class="hero">
+      <Lines />
+      <Logo client:load />
+      <h1>
+        The <i><ShinyText text="Ultimate" /></i> Resource<br />
+        <span>for</span> Design
+        <i>Engineers.</i>
+      </h1>
+      <p class="desc">
+        Curated by design engineers;
+        <br /><span>—</span> for design engineers.
+      </p>
+      <div class="links">
+        <Link text="Source Code" url="https://github.com/remvze/desengs" />
+        <Link text="Buy Me a Coffee" url="https://buymeacoffee.com/remvze" />
+      </div>
+    </section>
+  </Container>
+</div>
 
 <style>
+  .hidden {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+  }
+
   .hero {
-    padding: 120px 0 60px;
+    padding: 150px 0 50px;
 
     & h1 {
-      margin-bottom: 12px;
-      font-weight: 500;
+      font-family: var(--font-display);
+      font-size: var(--font-2xlg);
+      line-height: 1.2;
       color: var(--color-foreground);
+
+      & span {
+        font-size: var(--font-lg);
+      }
+
+      & i {
+        font-style: italic;
+      }
     }
 
-    & p {
-      font-size: var(--font-sm);
+    & .desc {
+      margin-top: 24px;
+      line-height: 1.5;
       color: var(--color-foreground-subtle);
 
-      &:not(:last-of-type) {
-        margin-bottom: 8px;
-      }
-
-      & a {
-        color: var(--color-foreground);
-        text-decoration: underline;
-        text-decoration-style: dotted;
-        text-underline-offset: 4px;
+      & span {
+        color: var(--color-foreground-subtler);
       }
     }
 
-    & .source {
-      margin-top: 24px;
-
-      & a {
-        font-size: var(--font-xsm);
-        color: var(--color-foreground-subtler);
-        text-decoration: underline;
-        text-decoration-style: dotted;
-        text-underline-offset: 4px;
-        transition: 0.2s;
-
-        &:hover {
-          color: var(--color-foreground-subtle);
-
-          &::after {
-            opacity: 1;
-            transform: translateX(0) scaleX(1);
-          }
-        }
-
-        &:active {
-          &::after {
-            margin-left: 6px;
-          }
-        }
-
-        &::after {
-          display: inline-flex;
-          margin-left: 4px;
-          color: var(--color-foreground);
-          text-decoration: none;
-          content: '→';
-          opacity: 0;
-          transition: 0.2s;
-          transform: translateX(-2px) scaleX(0.5);
-          transform-origin: left center;
-        }
-      }
+    & .links {
+      display: flex;
+      gap: 8px;
+      margin-top: 28px;
     }
   }
 </style>
