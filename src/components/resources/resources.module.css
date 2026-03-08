@@ -157,7 +157,7 @@
 
     & .divider {
       flex-grow: 1;
-      min-width: 20px;
+      min-width: 12px;
       border-bottom: 1px dashed var(--color-neutral-200);
       transition: 0.2s;
     }
