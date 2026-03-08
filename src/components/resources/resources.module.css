@@ -110,14 +110,16 @@
   margin-top: 36px;
   list-style: none;
 
+  &:has(> li:hover) li:not(:hover) {
+    opacity: 0.5;
+  }
+
   & li {
     display: flex;
     column-gap: 8px;
     align-items: center;
-
-    &:not(:last-of-type) {
-      margin-bottom: 8px;
-    }
+    padding: 6px 0;
+    transition: 0.2s;
 
     &:hover {
       & .divider {

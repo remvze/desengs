@@ -172,6 +172,31 @@ const _resources: Resources = [
     title: 'Design Engineer Jobs',
     url: 'https://designengineer.io/',
   },
+  {
+    date: '2026-03-09',
+    description:
+      'A non-exhaustive list of details that make a good web interface.',
+    format: 'read',
+    id: '',
+    title: 'Web Interface Guidelines',
+    url: 'https://interfaces.rauno.me/',
+  },
+  {
+    date: '2026-03-09',
+    description: 'Fast, unstyled command menu React component.',
+    format: 'build',
+    id: '',
+    title: '⌘K',
+    url: 'https://github.com/dip/cmdk',
+  },
+  {
+    date: '2026-03-09',
+    description: 'The documented collection of UI components.',
+    format: 'browse',
+    id: '',
+    title: 'UI Playbook',
+    url: 'https://uiplaybook.dev/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
