@@ -12,6 +12,12 @@ export type DesignEngineers = Array<DesignEngineer>;
 
 const designEngineers: DesignEngineers = [
   {
+    github: 'https://github.com/Abil-Shrestha',
+    name: 'Abil Shrestha',
+    website: 'https://www.abilshr.com/',
+    x: 'https://x.com/_abilshr',
+  },
+  {
     github: 'https://github.com/raunofreiberg',
     name: 'Rauno Freiberg',
     website: 'https://rauno.me/',
@@ -433,6 +439,13 @@ const designEngineers: DesignEngineers = [
     name: 'Mike Harmer',
     website: 'https://www.mikeharmer.com/',
     x: 'https://x.com/mikeharmer',
+  },
+  {
+    definition:
+      'Design engineering is removing the abstraction between the idea of the thing and the thing itself. It binds together the creative act of exploration and the technical discipline of making something real.',
+    github: 'https://github.com/heymynameisrob',
+    name: 'Rob Hough',
+    website: 'https://heymynameisrob.com/',    
   },
 ];
 
