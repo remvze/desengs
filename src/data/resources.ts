@@ -197,6 +197,15 @@ const _resources: Resources = [
     title: 'UI Playbook',
     url: 'https://uiplaybook.dev/',
   },
+  {
+    date: '2026-03-09',
+    description:
+      'An interactive reference manual for interaction-curious designers.',
+    format: 'learn',
+    id: '',
+    title: 'Devouring Details',
+    url: 'https://devouringdetails.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
