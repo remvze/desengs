@@ -206,6 +206,14 @@ const _resources: Resources = [
     title: 'Devouring Details',
     url: 'https://devouringdetails.com/',
   },
+  {
+    date: '2026-03-09',
+    description: 'What makes Family, Family.',
+    format: 'read',
+    id: '',
+    title: 'Family Values',
+    url: 'https://benji.org/family-values',
+  },
 ];
 
 export const resources = reverseArray(_resources);
