@@ -35,6 +35,18 @@ export const emojis: Record<Format, string> = {
   watch: '📽️',
 };
 
+export const colors: Record<Format, string> = {
+  browse: '#ef4444',
+  build: '#f97316',
+  follow: '#a3e635',
+  join: '#4ade80',
+  learn: '#2dd4bf',
+  listen: '#22d3ee',
+  read: '#8b5cf6',
+  use: '#6366f1',
+  watch: '#f472b6',
+};
+
 export const labels: Record<Format, string> = {
   browse: 'Browse',
   build: 'Build',
@@ -213,6 +225,14 @@ const _resources: Resources = [
     id: '',
     title: 'Family Values',
     url: 'https://benji.org/family-values',
+  },
+  {
+    date: '2026-03-09',
+    description: 'Real-time animated line chart for React.',
+    format: 'build',
+    id: '',
+    title: 'Liveline',
+    url: 'https://github.com/benjitaylor/liveline',
   },
 ];
 

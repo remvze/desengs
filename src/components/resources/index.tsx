@@ -1,5 +1,5 @@
 import type { Resources, Format } from '@/data/resources';
-import { emojis, formats, labels } from '@/data/resources';
+import { colors, formats, labels } from '@/data/resources';
 
 import styles from './resources.module.css';
 import { useMemo, useState } from 'react';
@@ -69,7 +69,11 @@ export function Resources({ resources }: ResourcesProps) {
                 <div className={cn(styles.corner, styles.four)} />
               </>
             )}
-            {emojis[format]} {labels[format]}
+            <div
+              className={styles.color}
+              style={{ background: colors[format] }}
+            />{' '}
+            <span>{labels[format]}</span>
           </button>
         ))}
         <button
@@ -88,8 +92,12 @@ export function Resources({ resources }: ResourcesProps) {
         <ul className={styles.list}>
           {filtered.map(resource => (
             <li key={resource.id}>
+              <div
+                className={styles.color}
+                style={{ background: colors[resource.format] }}
+              />
               <a href={resource.url} rel="noreferrer" target={'_blank'}>
-                {emojis[resource.format]} {resource.title}{' '}
+                {resource.title}{' '}
                 <span>
                   {resource.description && `• ${resource.description}`}
                 </span>

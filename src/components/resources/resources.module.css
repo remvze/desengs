@@ -36,6 +36,7 @@
   & button {
     position: relative;
     display: flex;
+    column-gap: 8px;
     align-items: center;
     justify-content: center;
     height: 36px;
@@ -60,6 +61,13 @@
 
     &:not(:disabled):active {
       transform: scale(0.95);
+    }
+
+    & .color {
+      width: 6px;
+      height: 6px;
+      background: var(--color-foreground);
+      border-radius: 50%;
     }
 
     &.active {
@@ -129,6 +137,14 @@
       & .date {
         color: var(--color-foreground-subtle);
       }
+    }
+
+    & .color {
+      width: 6px;
+      min-width: 6px;
+      height: 6px;
+      background: var(--color-foreground);
+      border-radius: 50%;
     }
 
     & a {
