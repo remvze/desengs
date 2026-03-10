@@ -260,6 +260,15 @@ const _resources: Resources = [
     title: 'Interface Craft',
     url: 'https://www.interfacecraft.dev/',
   },
+  {
+    date: '2026-03-10',
+    description:
+      'An up-to-date repository of interface components based on examples from the world of design systems, designed to be a reference for anyone building user interfaces.',
+    format: 'browse',
+    id: '',
+    title: 'The Component Gallery',
+    url: 'https://component.gallery/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
