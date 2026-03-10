@@ -234,6 +234,32 @@ const _resources: Resources = [
     title: 'Liveline',
     url: 'https://github.com/benjitaylor/liveline',
   },
+  {
+    date: '2026-03-10',
+    description:
+      'An interactive mini-course on creating SVG animations by Nanda Syahrasyad.',
+    format: 'learn',
+    id: '',
+    title: 'Interactive SVG Animations',
+    url: 'https://www.svg.guide/',
+  },
+  {
+    date: '2026-03-10',
+    description: 'What makes great interactions feel right?',
+    format: 'read',
+    id: '',
+    title: 'Invisible Details of Interaction Design',
+    url: 'https://rauno.me/craft/interaction-design',
+  },
+  {
+    date: '2026-03-10',
+    description:
+      'A working library for those committed to designing with uncommon care.',
+    format: 'learn',
+    id: '',
+    title: 'Interface Craft',
+    url: 'https://www.interfacecraft.dev/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
