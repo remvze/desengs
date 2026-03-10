@@ -127,9 +127,11 @@
     column-gap: 8px;
     align-items: center;
     padding: 6px 0;
-    transition: 0.2s;
+    transition: opacity 0.2s;
 
     &:hover {
+      transition-duration: 0s;
+
       & .divider {
         border-color: var(--color-neutral-300);
       }
