@@ -269,6 +269,15 @@ const _resources: Resources = [
     title: 'The Component Gallery',
     url: 'https://component.gallery/',
   },
+  {
+    date: '2026-03-11',
+    description:
+      'Convert, generate and explore OKLCH colors – a powerful tool to build unique and uniform color palettes.',
+    format: 'use',
+    id: '',
+    title: 'OKLCH.fyi',
+    url: 'https://oklch.fyi/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
