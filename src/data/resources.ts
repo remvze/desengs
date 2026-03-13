@@ -278,6 +278,15 @@ const _resources: Resources = [
     title: 'OKLCH.fyi',
     url: 'https://oklch.fyi/',
   },
+  {
+    date: '2026-03-14',
+    description:
+      'A living manual for better interfaces. Learn design principles, motion, typography, and more.',
+    format: 'browse',
+    id: '',
+    title: 'userinterface.wiki',
+    url: 'https://userinterface.wiki/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
