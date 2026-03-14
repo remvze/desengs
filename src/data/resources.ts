@@ -287,6 +287,14 @@ const _resources: Resources = [
     title: 'userinterface.wiki',
     url: 'https://userinterface.wiki/',
   },
+  {
+    date: '2026-03-14',
+    description: 'A list of useful tools for web-focused design engineers.',
+    format: 'browse',
+    id: '',
+    title: 'Design Engineer Tools',
+    url: 'https://designengineer.tools/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
