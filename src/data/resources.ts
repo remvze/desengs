@@ -295,6 +295,40 @@ const _resources: Resources = [
     title: 'Design Engineer Tools',
     url: 'https://designengineer.tools/',
   },
+  {
+    date: '2026-03-15',
+    description:
+      'Learn what Design Engineers do, why they matter to modern tech companies, and how they differ from vibe coders.',
+    format: 'read',
+    id: '',
+    title: 'Design Engineering',
+    url: 'https://www.designengineer.xyz/design-engineering',
+  },
+  {
+    date: '2026-03-15',
+    description:
+      'Thoughts about design, code, technology and everything in between.',
+    format: 'read',
+    id: '',
+    title: 'Becoming a Design Engineer',
+    url: 'https://marcel.io/posts/becoming-a-design-engineer',
+  },
+  {
+    date: '2026-03-15',
+    description: 'Links and observations on design engineering',
+    format: 'browse',
+    id: '',
+    title: 'Design Engineering',
+    url: 'https://www.floguo.com/notes/design-engineering',
+  },
+  {
+    date: '2026-03-15',
+    description: 'Founding design engineer at Paradigm',
+    format: 'follow',
+    id: '',
+    title: 'floguo',
+    url: 'https://www.floguo.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
