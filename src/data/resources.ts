@@ -329,6 +329,14 @@ const _resources: Resources = [
     title: 'floguo',
     url: 'https://www.floguo.com/',
   },
+  {
+    date: '2026-03-15',
+    description: 'A curated collection of easing graphs',
+    format: 'use',
+    id: '',
+    title: 'Easing Graphs',
+    url: 'https://www.easing.dev/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
