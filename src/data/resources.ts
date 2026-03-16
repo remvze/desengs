@@ -354,6 +354,15 @@ const _resources: Resources = [
     title: 'Calligraph',
     url: 'https://calligraph.raphaelsalaja.com/',
   },
+  {
+    date: '2026-03-16',
+    description:
+      'A collection of details that make your interfaces feel better.',
+    format: 'read',
+    id: '',
+    title: 'Details That Make Interfaces Feel Better',
+    url: 'https://jakub.kr/writing/details-that-make-interfaces-feel-better',
+  },
 ];
 
 export const resources = reverseArray(_resources);
