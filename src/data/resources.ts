@@ -337,6 +337,23 @@ const _resources: Resources = [
     title: 'Easing Graphs',
     url: 'https://www.easing.dev/',
   },
+  {
+    date: '2026-03-16',
+    description:
+      'My definition of design engineering after building the practice at DoorDash.',
+    format: 'read',
+    id: '',
+    title: 'The Attributes of a Design Engineer',
+    url: 'https://www.ryngonzalez.com/blog/the-attributes-of-a-design-engineer',
+  },
+  {
+    date: '2026-03-16',
+    description: 'Fluid text transitions powered by Motion',
+    format: 'build',
+    id: '',
+    title: 'Calligraph',
+    url: 'https://calligraph.raphaelsalaja.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
