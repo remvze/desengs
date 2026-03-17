@@ -390,6 +390,15 @@ const _resources: Resources = [
     title: 'Laws of UX',
     url: 'https://lawsofux.com/',
   },
+  {
+    date: '2026-03-17',
+    description:
+      'An open-source checklist to help you plan, build and grow your design system.',
+    format: 'use',
+    id: '',
+    title: 'Design System Checklist',
+    url: 'https://www.designsystemchecklist.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
