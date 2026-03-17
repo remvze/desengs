@@ -363,6 +363,15 @@ const _resources: Resources = [
     title: 'Details That Make Interfaces Feel Better',
     url: 'https://jakub.kr/writing/details-that-make-interfaces-feel-better',
   },
+  {
+    date: '2026-03-17',
+    description:
+      'A floating control panel for React: sliders, toggles, color pickers, spring editors, and action buttons wired directly to your UI values.',
+    format: 'build',
+    id: '',
+    title: 'DialKit',
+    url: 'https://joshpuckett.me/dialkit',
+  },
 ];
 
 export const resources = reverseArray(_resources);
