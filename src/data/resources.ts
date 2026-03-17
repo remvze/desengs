@@ -372,6 +372,24 @@ const _resources: Resources = [
     title: 'DialKit',
     url: 'https://joshpuckett.me/dialkit',
   },
+  {
+    date: '2026-03-17',
+    description:
+      '1 skill, 20 commands, and curated anti-patterns for impeccable frontend design. Works with Cursor, Claude Code, Gemini CLI, and Codex CLI.',
+    format: 'use',
+    id: '',
+    title: 'Impeccable',
+    url: 'https://impeccable.style/',
+  },
+  {
+    date: '2026-03-17',
+    description:
+      'Laws of UX is a collection of best practices that designers can consider when building user interfaces.',
+    format: 'browse',
+    id: '',
+    title: 'Laws of UX',
+    url: 'https://lawsofux.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
