@@ -399,6 +399,24 @@ const _resources: Resources = [
     title: 'Design System Checklist',
     url: 'https://www.designsystemchecklist.com/',
   },
+  {
+    date: '2026-03-18',
+    description:
+      'Ready to use, fancy React components to make the web fun again. Free & Open Source.',
+    format: 'build',
+    id: '',
+    title: 'Fancy Components',
+    url: 'https://www.fancycomponents.dev/',
+  },
+  {
+    date: '2026-03-18',
+    description:
+      'A curated collection of design principles used as decision-making frameworks. Practical examples and guidance for teams building products.',
+    format: 'browse',
+    id: '',
+    title: 'Design Principles',
+    url: 'https://principles.design/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
