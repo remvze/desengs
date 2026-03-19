@@ -1,13 +1,18 @@
 import styles from './link.module.css';
 
 interface LinkProps {
+  blank?: boolean;
   text: string;
   url: string;
 }
 
-export function Link({ text, url }: LinkProps) {
+export function Link({ blank = false, text, url }: LinkProps) {
   return (
-    <a className={styles.button} href={url} rel="noreferrer" target="_blank">
+    <a
+      className={styles.button}
+      href={url}
+      {...(blank ? { target: '_blank' } : {})}
+    >
       (
       <div>
         <span>{text}</span>
