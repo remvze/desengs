@@ -417,6 +417,15 @@ const _resources: Resources = [
     title: 'Design Principles',
     url: 'https://principles.design/',
   },
+  {
+    date: '2026-03-21',
+    description:
+      'Automated design reviews for AI-generated code. Catches accessibility issues and visual bugs in React, Vue, Svelte, and more.',
+    format: 'use',
+    id: '',
+    title: 'rams',
+    url: 'https://www.rams.ai/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
