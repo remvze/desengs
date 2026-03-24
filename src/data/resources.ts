@@ -435,6 +435,14 @@ const _resources: Resources = [
     title: 'A Collection of Design Engineers',
     url: 'https://maggieappleton.com/design-engineers',
   },
+  {
+    date: '2026-03-24',
+    description: 'A set of skills to polish interfaces built by agents.',
+    format: 'use',
+    id: '',
+    title: 'UI Skills',
+    url: 'https://www.ui-skills.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
