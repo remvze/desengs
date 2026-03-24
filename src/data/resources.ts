@@ -426,6 +426,15 @@ const _resources: Resources = [
     title: 'rams',
     url: 'https://www.rams.ai/',
   },
+  {
+    date: '2026-03-24',
+    description:
+      'Collecting people I know who work at the intersection of design and engineering, in an attempt to figure out what a design engineer is',
+    format: 'browse',
+    id: '',
+    title: 'A Collection of Design Engineers',
+    url: 'https://maggieappleton.com/design-engineers',
+  },
 ];
 
 export const resources = reverseArray(_resources);
