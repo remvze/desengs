@@ -443,6 +443,15 @@ const _resources: Resources = [
     title: 'UI Skills',
     url: 'https://www.ui-skills.com/',
   },
+  {
+    date: '2026-03-27',
+    description:
+      'A playground for creating box shadows for web and React Native.',
+    format: 'use',
+    id: '',
+    title: 'shadowLab',
+    url: 'https://shadowlab.mocarski.design/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
