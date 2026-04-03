@@ -452,6 +452,14 @@ const _resources: Resources = [
     title: 'shadowLab',
     url: 'https://shadowlab.mocarski.design/',
   },
+  {
+    date: '2026-04-03',
+    description: 'Dependency-free animated text component.',
+    format: 'build',
+    id: '',
+    title: 'Torph',
+    url: 'https://torph.lochie.me/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
