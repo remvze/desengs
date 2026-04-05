@@ -460,6 +460,14 @@ const _resources: Resources = [
     title: 'Torph',
     url: 'https://torph.lochie.me/',
   },
+  {
+    date: '2026-04-05',
+    description: 'How I use AI as a design engineer on a daily basis.',
+    format: 'read',
+    id: '',
+    title: 'Using AI as a Design Engineer',
+    url: 'https://jakub.kr/work/using-ai-as-a-design-engineer',
+  },
 ];
 
 export const resources = reverseArray(_resources);
