@@ -468,6 +468,14 @@ const _resources: Resources = [
     title: 'Using AI as a Design Engineer',
     url: 'https://jakub.kr/work/using-ai-as-a-design-engineer',
   },
+  {
+    date: '2026-04-16',
+    description: 'The Digital Library for Designers and Engineers.',
+    format: 'browse',
+    id: '',
+    title: 'ui.land',
+    url: 'https://ui.land/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
