@@ -476,6 +476,15 @@ const _resources: Resources = [
     title: 'ui.land',
     url: 'https://ui.land/',
   },
+  {
+    date: '2026-04-27',
+    description:
+      'Two years of UI experiments. 159+ components built on coss-ui, all on the shadcn registry.',
+    format: 'browse',
+    id: '',
+    title: 'devl.dev',
+    url: 'https://devl.dev/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
