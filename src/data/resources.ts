@@ -480,7 +480,7 @@ const _resources: Resources = [
     date: '2026-04-27',
     description:
       'Two years of UI experiments. 159+ components built on coss-ui, all on the shadcn registry.',
-    format: 'browse',
+    format: 'build',
     id: '',
     title: 'devl.dev',
     url: 'https://devl.dev/',
