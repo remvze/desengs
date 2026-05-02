@@ -485,6 +485,15 @@ const _resources: Resources = [
     title: 'devl.dev',
     url: 'https://devl.dev/',
   },
+  {
+    date: '2026-05-02',
+    description:
+      'Collection of the most essential transitions for web apps that you can just copy and paste into any project.',
+    format: 'browse',
+    id: '',
+    title: 'Transitions.dev',
+    url: 'https://transitions.dev/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
