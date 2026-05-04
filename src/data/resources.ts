@@ -494,6 +494,15 @@ const _resources: Resources = [
     title: 'Transitions.dev',
     url: 'https://transitions.dev/',
   },
+  {
+    date: '2026-05-04',
+    description:
+      'Capture screenshots, video, voice notes, and annotations from users as in-app feedback. One React component, one server helper. Routes to Slack, Linear, GitHub, email, or webhooks. MIT licensed.',
+    format: 'build',
+    id: '',
+    title: 'Remediate',
+    url: 'https://www.remediate.ski/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
