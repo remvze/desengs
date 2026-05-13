@@ -520,6 +520,14 @@ const _resources: Resources = [
     title: 'Interfaces',
     url: 'https://interfaces.dev/',
   },
+  {
+    date: '2026-05-13',
+    description: 'Founding Design Engineer at Interfere',
+    format: 'follow',
+    id: '',
+    title: 'Jakub Krehel',
+    url: 'https://jakub.kr/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
