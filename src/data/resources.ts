@@ -503,6 +503,23 @@ const _resources: Resources = [
     title: 'Remediate',
     url: 'https://www.remediate.ski/',
   },
+  {
+    date: '2026-05-13',
+    description:
+      'Generate deterministic, unique avatars from wallet addresses, usernames, or any string. Zero dependencies. Gradient & dither modes. React & vanilla JS.',
+    format: 'build',
+    id: '',
+    title: 'Hashvatar',
+    url: 'https://www.hashvatar.com/',
+  },
+  {
+    date: '2026-05-13',
+    description: 'Design Engineering Magazine',
+    format: 'browse',
+    id: '',
+    title: 'Interfaces',
+    url: 'https://interfaces.dev/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
