@@ -528,6 +528,15 @@ const _resources: Resources = [
     title: 'Jakub Krehel',
     url: 'https://jakub.kr/',
   },
+  {
+    date: '2026-05-13',
+    description:
+      'Design and code work hand-in-hand to produce memorable digital products.',
+    format: 'browse',
+    id: '',
+    title: 'Design for Engineers',
+    url: 'https://didoesdigital.com/project/design-for-engineers/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
