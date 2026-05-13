@@ -537,6 +537,15 @@ const _resources: Resources = [
     title: 'Design for Engineers',
     url: 'https://didoesdigital.com/project/design-for-engineers/',
   },
+  {
+    date: '2026-05-13',
+    description:
+      'An exploration of aesthetic taste in art, design, and creative fields.',
+    format: 'read',
+    id: '',
+    title: 'The Concept of Taste',
+    url: 'https://www.raphaelsalaja.com/library/the-concept-of-taste',
+  },
 ];
 
 export const resources = reverseArray(_resources);
