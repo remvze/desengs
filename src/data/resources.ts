@@ -546,6 +546,15 @@ const _resources: Resources = [
     title: 'The Concept of Taste',
     url: 'https://www.raphaelsalaja.com/library/the-concept-of-taste',
   },
+  {
+    date: '2026-05-14',
+    description:
+      'Taste Skill gives your AI coding agent good taste. Open-source skill files that stop Cursor, Claude Code, Codex & more from generating generic, boring frontends. Install in one command.',
+    format: 'use',
+    id: '',
+    title: 'Taste Skill',
+    url: 'https://www.tasteskill.dev/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
