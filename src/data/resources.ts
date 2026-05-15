@@ -555,6 +555,14 @@ const _resources: Resources = [
     title: 'Taste Skill',
     url: 'https://www.tasteskill.dev/',
   },
+  {
+    date: '2026-05-15',
+    description: '',
+    format: 'read',
+    id: '',
+    title: 'Front-of-the-front-end and back-of-the-front-end web development',
+    url: 'https://bradfrost.com/blog/post/front-of-the-front-end-and-back-of-the-front-end-web-development/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
