@@ -563,6 +563,15 @@ const _resources: Resources = [
     title: 'Front-of-the-front-end and back-of-the-front-end web development',
     url: 'https://bradfrost.com/blog/post/front-of-the-front-end-and-back-of-the-front-end-web-development/',
   },
+  {
+    date: '2026-05-15',
+    description:
+      "A simple Tailwind CSS plugin for beautiful gradient borders using mask-composite. Mirrors Tailwind's gradient utilities with from / via / to color stops, configurable widths, and an animated variant.",
+    format: 'build',
+    id: '',
+    title: 'Gradient Border Plugin',
+    url: 'https://gradient-border.floriankiem.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
