@@ -580,6 +580,15 @@ const _resources: Resources = [
     title: '@web-kits/audio',
     url: 'https://audio.raphaelsalaja.com/',
   },
+  {
+    date: '2026-05-16',
+    description:
+      'Best-in-class Design Systems collection with a repository of Components and Foundations references from top-tier tech companies and leading UI teams.',
+    format: 'browse',
+    id: '',
+    title: 'Design Systems Surf',
+    url: 'https://designsystems.surf/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
