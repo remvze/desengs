@@ -572,6 +572,14 @@ const _resources: Resources = [
     title: 'Gradient Border Plugin',
     url: 'https://gradient-border.floriankiem.com/',
   },
+  {
+    date: '2026-05-16',
+    description: 'Declarative audio synthesis for the web.',
+    format: 'build',
+    id: '',
+    title: '@web-kits/audio',
+    url: 'https://audio.raphaelsalaja.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
