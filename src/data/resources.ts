@@ -589,6 +589,15 @@ const _resources: Resources = [
     title: 'Design Systems Surf',
     url: 'https://designsystems.surf/',
   },
+  {
+    date: '2026-05-18',
+    description:
+      'Discover micro-interactions, easter eggs, and other seemingly extra design details that infuse life, personality, and fun back into the web.',
+    format: 'browse',
+    id: '',
+    title: 'Design Spells',
+    url: 'https://designspells.com',
+  },
 ];
 
 export const resources = reverseArray(_resources);
