@@ -598,6 +598,15 @@ const _resources: Resources = [
     title: 'Design Spells',
     url: 'https://designspells.com',
   },
+  {
+    date: '2026-07-01',
+    description:
+      'Beautiful UI components and templates to make your landing page look stunning.',
+    format: 'build',
+    id: '',
+    title: 'Magic UI',
+    url: 'https://magicui.design/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
