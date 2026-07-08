@@ -607,6 +607,14 @@ const _resources: Resources = [
     title: 'Magic UI',
     url: 'https://magicui.design/',
   },
+  {
+    date: '2026-07-08',
+    description: 'Why you are animating more often than you should.',
+    format: 'read',
+    id: '',
+    title: "You Don't Need Animations",
+    url: 'https://emilkowal.ski/ui/you-dont-need-animations',
+  },
 ];
 
 export const resources = reverseArray(_resources);
