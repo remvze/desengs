@@ -9,7 +9,8 @@ export type Format =
   | 'build'
   | 'learn'
   | 'join'
-  | 'follow';
+  | 'follow'
+  | 'apply';
 
 export const formats: Array<Format> = [
   'read',
@@ -21,9 +22,11 @@ export const formats: Array<Format> = [
   'learn',
   'join',
   'follow',
+  'apply',
 ];
 
 export const emojis: Record<Format, string> = {
+  apply: '💰',
   browse: '🔎',
   build: '🛠️',
   follow: '👀',
@@ -36,6 +39,7 @@ export const emojis: Record<Format, string> = {
 };
 
 export const colors: Record<Format, string> = {
+  apply: '#fbbf24',
   browse: '#ef4444',
   build: '#f97316',
   follow: '#a3e635',
@@ -48,6 +52,7 @@ export const colors: Record<Format, string> = {
 };
 
 export const labels: Record<Format, string> = {
+  apply: 'Apply',
   browse: 'Browse',
   build: 'Build',
   follow: 'Follow',
@@ -614,6 +619,22 @@ const _resources: Resources = [
     id: '',
     title: "You Don't Need Animations",
     url: 'https://emilkowal.ski/ui/you-dont-need-animations',
+  },
+  {
+    date: '2026-07-08',
+    description: 'Design Engineer / Rockstar New York',
+    format: 'apply',
+    id: '',
+    title: 'Rockstar Games',
+    url: 'https://www.rockstargames.com/careers/openings/position/7767935003',
+  },
+  {
+    date: '2026-07-08',
+    description: 'Product Engineer / Americas / Remote',
+    format: 'apply',
+    id: '',
+    title: 'Resend',
+    url: 'https://resend.com/careers/9b68ba51-3895-4d29-8fd1-364bdf8956e7',
   },
 ];
 
