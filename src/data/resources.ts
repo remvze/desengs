@@ -645,6 +645,15 @@ const _resources: Resources = [
     title: 'NumberFlow',
     url: 'https://number-flow.barvian.me/',
   },
+  {
+    date: '2026-07-09',
+    description:
+      'A curated reading list for product, interaction, and visual designers studying usability, systems, typography, research, and the craft of making useful things.',
+    format: 'browse',
+    id: '',
+    title: 'Design Books',
+    url: 'https://designbooks.org/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
