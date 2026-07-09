@@ -636,6 +636,15 @@ const _resources: Resources = [
     title: 'Resend',
     url: 'https://resend.com/careers/9b68ba51-3895-4d29-8fd1-364bdf8956e7',
   },
+  {
+    date: '2026-07-09',
+    description:
+      'A React component to animate numbers. Dependency-free. Accessible. Customizable.',
+    format: 'build',
+    id: '',
+    title: 'NumberFlow',
+    url: 'https://number-flow.barvian.me/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
