@@ -654,6 +654,14 @@ const _resources: Resources = [
     title: 'Design Books',
     url: 'https://designbooks.org/',
   },
+  {
+    date: '2026-07-12',
+    description: 'Skills for Design Engineers.',
+    format: 'build',
+    id: '',
+    title: 'emilkowalski/skills',
+    url: 'https://github.com/emilkowalski/skills',
+  },
 ];
 
 export const resources = reverseArray(_resources);
