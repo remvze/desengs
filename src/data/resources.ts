@@ -695,6 +695,15 @@ const _resources: Resources = [
     title: 'abtest.design',
     url: 'https://abtest.design/',
   },
+  {
+    date: '2026-07-13',
+    description:
+      'Composable, dithered charts with a recharts-style children-as-config API.',
+    format: 'build',
+    id: '',
+    title: 'dither-kit',
+    url: 'https://www.tripwire.sh/dither-kit',
+  },
 ];
 
 export const resources = reverseArray(_resources);
