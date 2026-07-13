@@ -678,6 +678,23 @@ const _resources: Resources = [
     title: 'Autumn',
     url: 'https://findautumn.com/careers/design-engineer',
   },
+  {
+    date: '2026-07-13',
+    description: 'The visual feedback tool for agents.',
+    format: 'use',
+    id: '',
+    title: 'Agentation',
+    url: 'https://www.agentation.com/',
+  },
+  {
+    date: '2026-07-13',
+    description:
+      'Curated collection of A/B test results from best-in-class apps',
+    format: 'browse',
+    id: '',
+    title: 'abtest.design',
+    url: 'https://abtest.design/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
