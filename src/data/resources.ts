@@ -662,6 +662,22 @@ const _resources: Resources = [
     title: 'emilkowalski/skills',
     url: 'https://github.com/emilkowalski/skills',
   },
+  {
+    date: '2026-07-13',
+    description: 'Product Design Engineer / Remote',
+    format: 'apply',
+    id: '',
+    title: 'Zed',
+    url: 'https://zed.dev/jobs/product-designer',
+  },
+  {
+    date: '2026-07-13',
+    description: 'Founding Design Engineer / Remote, United States',
+    format: 'apply',
+    id: '',
+    title: 'Autumn',
+    url: 'https://findautumn.com/careers/design-engineer',
+  },
 ];
 
 export const resources = reverseArray(_resources);
