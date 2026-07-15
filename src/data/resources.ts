@@ -657,7 +657,7 @@ const _resources: Resources = [
   {
     date: '2026-07-12',
     description: 'Skills for Design Engineers.',
-    format: 'build',
+    format: 'use',
     id: '',
     title: 'emilkowalski/skills',
     url: 'https://github.com/emilkowalski/skills',
@@ -703,6 +703,15 @@ const _resources: Resources = [
     id: '',
     title: 'dither-kit',
     url: 'https://www.tripwire.sh/dither-kit',
+  },
+  {
+    date: '2026-07-15',
+    description:
+      'A set of agent skills that help improve different parts of a product, from animations and typography to layout and colors.',
+    format: 'use',
+    id: '',
+    title: 'jakubkrehel/skills',
+    url: 'https://github.com/jakubkrehel/skills',
   },
 ];
 
