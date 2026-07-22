@@ -713,6 +713,14 @@ const _resources: Resources = [
     title: 'jakubkrehel/skills',
     url: 'https://github.com/jakubkrehel/skills',
   },
+  {
+    date: '2026-07-22',
+    description: 'Dotted thought-orb loading indicators for AI and agent UIs.',
+    format: 'build',
+    id: '',
+    title: 'Thinking orbs',
+    url: 'https://orbs.jakubantalik.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
