@@ -729,6 +729,15 @@ const _resources: Resources = [
     title: 'Fluid Functionalism',
     url: 'https://www.fluidfunctionalism.com/',
   },
+  {
+    date: '2026-08-05',
+    description:
+      'A credit & debit card component for payment forms: live brand detection, 3D flip, themeable variants.',
+    format: 'build',
+    id: '',
+    title: 'crd-ui',
+    url: 'https://crd-ui.juanda.co/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
