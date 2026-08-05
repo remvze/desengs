@@ -721,6 +721,14 @@ const _resources: Resources = [
     title: 'Thinking orbs',
     url: 'https://orbs.jakubantalik.com/',
   },
+  {
+    date: '2026-08-05',
+    description: 'Open Source UI components created by @micka_design',
+    format: 'build',
+    id: '',
+    title: 'Fluid Functionalism',
+    url: 'https://www.fluidfunctionalism.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
