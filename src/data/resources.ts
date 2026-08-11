@@ -738,6 +738,14 @@ const _resources: Resources = [
     title: 'crd-ui',
     url: 'https://crd-ui.juanda.co/',
   },
+  {
+    date: '2026-08-11',
+    description: 'Liquid UI effects for React.',
+    format: 'build',
+    id: '',
+    title: 'Liquid Gooey',
+    url: 'https://gooey.jakubantalik.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
