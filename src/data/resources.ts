@@ -746,6 +746,14 @@ const _resources: Resources = [
     title: 'Liquid Gooey',
     url: 'https://gooey.jakubantalik.com/',
   },
+  {
+    date: '2026-08-11',
+    description: 'A headless React lens that refracts the live page.',
+    format: 'build',
+    id: '',
+    title: 'liquid-glass',
+    url: 'https://glass.samasante.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
