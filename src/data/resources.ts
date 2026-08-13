@@ -754,6 +754,15 @@ const _resources: Resources = [
     title: 'liquid-glass',
     url: 'https://glass.samasante.com/',
   },
+  {
+    date: '2026-08-13',
+    description:
+      'Micro-interactions for react, built for the half-second after a click.',
+    format: 'build',
+    id: '',
+    title: 'interior.dev',
+    url: 'https://www.interior.dev/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
