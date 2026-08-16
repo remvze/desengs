@@ -763,6 +763,22 @@ const _resources: Resources = [
     title: 'interior.dev',
     url: 'https://www.interior.dev/',
   },
+  {
+    date: '2026-08-16',
+    description: 'Morph any SVG icon into any other with spring physics.',
+    format: 'build',
+    id: '',
+    title: 'morphicons',
+    url: 'https://www.morphicons.com/',
+  },
+  {
+    date: '2026-08-16',
+    description: 'A realistic guide to shipping your own designs.',
+    format: 'read',
+    id: '',
+    title: 'How to become an AI Designer',
+    url: 'https://uxdesign.cc/how-to-become-an-ai-designer-ff8ee8aed205',
+  },
 ];
 
 export const resources = reverseArray(_resources);
