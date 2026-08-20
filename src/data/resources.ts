@@ -779,6 +779,15 @@ const _resources: Resources = [
     title: 'How to become an AI Designer',
     url: 'https://uxdesign.cc/how-to-become-an-ai-designer-ff8ee8aed205',
   },
+  {
+    date: '2026-08-20',
+    description:
+      'How icon morphing actually works, in ten parts, ending with enough to go and build it yourself.',
+    format: 'learn',
+    id: '',
+    title: 'Morphrig',
+    url: 'https://morphrig.dev',
+  },
 ];
 
 export const resources = reverseArray(_resources);
