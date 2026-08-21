@@ -24,6 +24,7 @@
   "dependencies": {
     "@astrojs/react": "4.4.2",
     "@astrojs/sitemap": "3.6.0",
+    "@base-ui/react": "1.7.0",
     "@custom-react-hooks/use-element-size": "1.5.1",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",

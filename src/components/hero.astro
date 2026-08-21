@@ -4,6 +4,7 @@ import Lines from './lines.astro';
 import { Logo } from './logo';
 import { ShinyText } from './shiny-text';
 import { Link } from './link';
+import { Sponsors } from './sponsors';
 ---
 
 <div class="hidden">
@@ -20,6 +21,9 @@ import { Link } from './link';
         Curated by design engineers;
         <br /><span>—</span> for design engineers.
       </p>
+
+      <Sponsors client:load />
+
       <div class="links">
         <Link text="Talent Network" url="/talent-network" />
         <Link

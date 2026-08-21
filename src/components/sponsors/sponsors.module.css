@@ -1,0 +1,58 @@
+.sponsors {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 28px;
+
+  & p {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    font-size: var(--font-xsm);
+    line-height: 1;
+
+    & span {
+      display: flex;
+      align-items: center;
+      line-height: 1;
+    }
+  }
+
+  & .items {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+
+    & a {
+      text-decoration: none;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.075);
+      }
+
+      & img {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--color-neutral-300);
+        border-radius: 12px;
+      }
+    }
+  }
+}
+
+.tooltip {
+  padding: 6px 10px;
+  font-size: var(--font-xsm);
+  line-height: 1;
+  color: var(--color-foreground);
+  background: var(--color-neutral-100);
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 6px;
+}
+
+.tooltipArrow {
+  width: 8px;
+  height: 4px;
+  fill: var(--color-neutral-900);
+}
