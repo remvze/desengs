@@ -788,6 +788,15 @@ const _resources: Resources = [
     title: 'Morphrig',
     url: 'https://morphrig.dev',
   },
+  {
+    date: '2026-08-21',
+    description:
+      'A list of tips, improvements and best practices that quickly make your interfaces better.',
+    format: 'read',
+    id: '',
+    title: 'Interface Cheat Sheet',
+    url: 'https://interfaces.dev/cheat-sheet',
+  },
 ];
 
 export const resources = reverseArray(_resources);

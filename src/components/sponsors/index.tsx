@@ -27,7 +27,7 @@ export function Sponsors() {
       <div className={styles.items}>
         <Tooltip.Provider delay={0}>
           {sponsors.map(sponsor => (
-            <Tooltip.Root key={sponsor.name}>
+            <Tooltip.Root disableHoverablePopup key={sponsor.name}>
               <Tooltip.Trigger
                 aria-label={sponsor.name}
                 render={
