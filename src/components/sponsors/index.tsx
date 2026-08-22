@@ -7,7 +7,7 @@ const sponsors = [
     alt: 'Interfaces Logo',
     logo: '/sponsors/interfaces-logo.svg',
     name: 'Interfaces: The Design Engineering Magazine',
-    url: 'https://interfaces.dev/?utm_source=desengs&utm_medium=sponsorship',
+    url: 'https://curation.systems/s/interfaces-dev',
   },
 ];
 
