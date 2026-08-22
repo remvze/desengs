@@ -4,8 +4,8 @@ const sponsors = [
   {
     alt: 'Interfaces Logo',
     logo: '/sponsors/interfaces-logo.svg',
-    name: 'Interfaces: Design Engineering Magazine',
-    url: 'https://interfaces.dev/?ref=desengs.com',
+    name: 'Interfaces: The Design Engineering Magazine',
+    url: 'https://interfaces.dev/?utm_source=desengs&utm_medium=sponsorship',
   },
 ];
 
