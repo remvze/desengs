@@ -797,6 +797,15 @@ const _resources: Resources = [
     title: 'Interface Cheat Sheet',
     url: 'https://interfaces.dev/cheat-sheet',
   },
+  {
+    date: '2026-08-22',
+    description:
+      'Create beautiful product visuals from your UI. Studio-quality photos and videos of software, right in the browser.',
+    format: 'use',
+    id: '',
+    title: 'UI Camera',
+    url: 'https://ui.camera',
+  },
 ];
 
 export const resources = reverseArray(_resources);
