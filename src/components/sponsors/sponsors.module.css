@@ -20,6 +20,12 @@
         & img {
           border-color: var(--color-neutral-300);
         }
+
+        & p {
+          & span {
+            transform: translate(2px, -2px);
+          }
+        }
       }
 
       & img {
@@ -33,6 +39,16 @@
       & p {
         font-size: var(--font-xsm);
         color: var(--color-foreground);
+
+        & span {
+          display: inline-flex;
+          align-items: center;
+          height: 1lh;
+          font-size: var(--font-sm);
+          color: var(--color-foreground-subtler);
+          vertical-align: middle;
+          transition: transform 0.2s;
+        }
       }
     }
   }

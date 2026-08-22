@@ -1,3 +1,5 @@
+import { LuArrowUpRight } from 'react-icons/lu';
+
 import styles from './sponsors.module.css';
 
 const sponsors = [
@@ -18,7 +20,12 @@ export function Sponsors() {
           <li key={sponsor.name}>
             <a href={sponsor.url} rel="noreferrer" target="_blank">
               <img alt={sponsor.alt} src={sponsor.logo} />
-              <p>{sponsor.name}</p>
+              <p>
+                {sponsor.name}{' '}
+                <span>
+                  <LuArrowUpRight />
+                </span>
+              </p>
             </a>
           </li>
         ))}
