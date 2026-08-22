@@ -17,10 +17,6 @@
       text-decoration: none;
 
       &:hover {
-        & p {
-          color: var(--color-foreground);
-        }
-
         & img {
           border-color: var(--color-neutral-300);
         }
@@ -36,8 +32,7 @@
 
       & p {
         font-size: var(--font-xsm);
-        color: var(--color-foreground-subtle);
-        transition: color 0.2s;
+        color: var(--color-foreground);
       }
     }
   }
