@@ -9,6 +9,12 @@ const sponsors = [
     name: 'Interfaces: The Design Engineering Magazine',
     url: 'https://curation.systems/s/interfaces-dev',
   },
+  {
+    alt: 'Resurf Logo',
+    logo: '/sponsors/resurf-logo.svg',
+    name: 'Resurf: Save Anything Worth Keeping',
+    url: 'https://curation.systems/s/resurf-so',
+  },
 ];
 
 export function Sponsors() {
