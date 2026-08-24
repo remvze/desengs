@@ -15,6 +15,12 @@ const sponsors = [
     name: 'Resurf: Save Anything Worth Keeping',
     url: 'https://curation.systems/s/resurf-so',
   },
+  {
+    alt: 'React Bits Pro Logo',
+    logo: '/sponsors/reactbits-pro-logo.svg',
+    name: 'React Bits Pro: React Components, Blocks & Templates',
+    url: 'https://curation.systems/s/pro-reactbits-dev',
+  },
 ];
 
 export function Sponsors() {
