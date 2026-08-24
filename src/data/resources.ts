@@ -806,6 +806,14 @@ const _resources: Resources = [
     title: 'UI Camera',
     url: 'https://ui.camera',
   },
+  {
+    date: '2026-08-24',
+    description: "What's changed, and what still matters.",
+    format: 'read',
+    id: '',
+    title: 'Is AI going to steal my job as a design engineer?',
+    url: 'https://twilson.net/writing/ai-design-engineer',
+  },
 ];
 
 export const resources = reverseArray(_resources);
