@@ -814,6 +814,14 @@ const _resources: Resources = [
     title: 'Is AI going to steal my job as a design engineer?',
     url: 'https://twilson.net/writing/ai-design-engineer',
   },
+  {
+    date: '2026-08-26',
+    description: '',
+    format: 'watch',
+    id: '',
+    title: 'The Rise of Design Engineering',
+    url: 'https://youtu.be/uEMEs499fUs',
+  },
 ];
 
 export const resources = reverseArray(_resources);
