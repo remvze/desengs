@@ -22,7 +22,12 @@ import { Sponsors } from './sponsors';
         <br /><span>—</span> for design engineers.
       </p>
 
-      <Sponsors client:load />
+      <Sponsors client:only="react">
+        <div class="sponsors-loader" slot="fallback">
+          <div class="loader"></div>
+          <p>Loading Sponsors...</p>
+        </div>
+      </Sponsors>
 
       <div class="links">
         <Link text="Talent Network" url="/talent-network" />
@@ -74,6 +79,40 @@ import { Sponsors } from './sponsors';
       display: flex;
       gap: 8px;
       margin-top: 28px;
+    }
+  }
+
+  .sponsors-loader {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-top: 28px;
+
+    & .loader {
+      width: 10px;
+      height: 10px;
+      border: 2px solid var(--color-neutral-100);
+      border-top-color: var(--color-neutral-600);
+      border-radius: 50%;
+      animation-name: rotate;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    & p {
+      font-size: var(--font-xsm);
+      color: var(--color-foreground-subtler);
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
     }
   }
 </style>
