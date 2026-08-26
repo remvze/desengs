@@ -822,6 +822,15 @@ const _resources: Resources = [
     title: 'The Rise of Design Engineering',
     url: 'https://youtu.be/uEMEs499fUs',
   },
+  {
+    date: '2026-08-26',
+    description:
+      'Cuelume is a tiny, dependency-free library of carefully designed interaction sounds, synthesized live with Web Audio.',
+    format: 'build',
+    id: '',
+    title: 'Cuelume',
+    url: 'https://cuelume.dev',
+  },
 ];
 
 export const resources = reverseArray(_resources);
