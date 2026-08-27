@@ -290,11 +290,9 @@ function GridItem({
     <motion.a
       className={styles.imageCard}
       draggable={false}
-      href={website.url}
+      href={`/inspiration/${website.slug}`}
       ref={anchorRef}
-      rel="noreferrer"
       style={{ height: CARD_HEIGHT, opacity, width: CARD_WIDTH, x, y }}
-      target="_blank"
       onClick={onClick}
     >
       <img
