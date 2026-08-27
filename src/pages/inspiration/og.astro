@@ -4,36 +4,32 @@ import { IoIosArrowRoundBack } from 'react-icons/io';
 import Layout from '@/layouts/layout.astro';
 import { ShinyText } from '@/components/shiny-text';
 import { Container } from '@/components/container';
-import { Websites } from '@/components/websites';
-import { websites } from '@/data/websites';
+import { Images } from '@/components/images';
+import { images } from '@/data/images';
 import { Sponsors } from '@/components/sponsors';
-import { Link } from '@/components/link';
 ---
 
-<Layout title="Web Design Inspiration">
+<Layout title="OG Image Inspiration">
   <Container>
     <section class="hero">
-      <a href="/"><IoIosArrowRoundBack /></a>
+      <a href="/inspiration"><IoIosArrowRoundBack /></a>
       <h1>
-        The <i>Daily</i> Web<br />Design <i><ShinyText text="Inspiration" />.</i
-        >
+        Gallery of <i><ShinyText text="Beautiful" /></i><br />OG <i>Images.</i>
       </h1>
       <p>
-        <span>{websites.length.toString().padStart(3, '0')}</span> well-designed
-        websites.
+        <span>{images.length.toString().padStart(3, '0')}</span> well-designed OG
+        images.
       </p>
 
       <Sponsors client:only="react">
         <div class="cover" slot="fallback"></div>
       </Sponsors>
-
-      <div class="links">
-        <Link text="OG Images" url="/inspiration/og" />
-      </div>
     </section>
   </Container>
 
-  <Websites client:load />
+  <Container wide>
+    <Images client:only />
+  </Container>
 </Layout>
 
 <style>
@@ -71,12 +67,6 @@ import { Link } from '@/components/link';
         font-family: var(--font-mono);
         color: var(--color-foreground);
       }
-    }
-
-    & .links {
-      display: flex;
-      gap: 8px;
-      margin-top: 28px;
     }
   }
 
