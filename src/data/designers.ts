@@ -290,4 +290,8 @@ export const x: Designer[] = reverseArray([
     name: 'Preston',
     username: 'prestonb_xyz',
   },
+  {
+    name: 'Arjun',
+    username: 'ArjunGfx',
+  },
 ]);
