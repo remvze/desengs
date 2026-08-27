@@ -6,6 +6,7 @@ import { ShinyText } from '@/components/shiny-text';
 import { Container } from '@/components/container';
 import { Websites } from '@/components/websites';
 import { websites } from '@/data/websites';
+import { Sponsors } from '@/components/sponsors';
 ---
 
 <Layout title="Web Design Inspiration">
@@ -20,6 +21,10 @@ import { websites } from '@/data/websites';
         <span>{websites.length.toString().padStart(3, '0')}</span> well-designed
         websites.
       </p>
+
+      <Sponsors client:only="react">
+        <div class="cover" slot="fallback"></div>
+      </Sponsors>
     </section>
   </Container>
 
@@ -62,5 +67,12 @@ import { websites } from '@/data/websites';
         color: var(--color-foreground);
       }
     }
+  }
+
+  .cover {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: var(--color-neutral-50);
   }
 </style>
