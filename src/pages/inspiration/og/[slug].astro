@@ -56,7 +56,13 @@ const relatedImages = pickMany(
         rel="noreferrer"
         target="_blank"
       >
-        <img alt={`OG for ${image.source.name}`} src={image.image} />
+        <img
+          alt={`OG for ${image.source.name}`}
+          src={image.image}
+          style={{
+            aspectRatio: `${image.dimensions.width} / ${image.dimensions.height}`,
+          }}
+        />
       </a>
 
       <section class="info">
