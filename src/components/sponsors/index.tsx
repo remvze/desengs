@@ -25,6 +25,12 @@ const sponsors = [
     name: 'React Bits Pro: React Components, Blocks & Templates',
     url: 'https://curation.systems/s/pro-reactbits-dev',
   },
+  {
+    alt: 'Details Logo',
+    logo: '/sponsors/details-logo.svg',
+    name: 'Details: Give Your AI Taste',
+    url: 'https://curation.systems/s/details-so',
+  },
 ];
 
 type Sponsor = (typeof sponsors)[number];
