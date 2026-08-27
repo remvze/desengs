@@ -1,0 +1,301 @@
+.app {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  overflow: hidden;
+
+  & .sponsors {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    & a {
+      display: block;
+
+      & img {
+        display: block;
+        width: 32px;
+        height: 32px;
+        border: 1px solid var(--color-neutral-200);
+      }
+    }
+  }
+
+  & .pattern {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: #fff;
+    background-image: linear-gradient(
+        var(--color-neutral-100) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to right,
+        var(--color-neutral-100) 1px,
+        var(--color-neutral-50) 1px
+      );
+    background-position: center;
+    background-size: 40px 40px;
+    opacity: 0.6;
+  }
+
+  & .details {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    font-family: var(--font-mono);
+    font-size: var(--font-2xsm);
+    text-align: center;
+    text-transform: uppercase;
+
+    & h1 {
+      margin-bottom: 8px;
+      font-size: var(--font-xsm);
+      font-weight: 500;
+    }
+
+    & p {
+      margin-bottom: 4px;
+      color: var(--color-foreground-subtle);
+    }
+
+    & .links {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 8px;
+
+      & a {
+        font-weight: 500;
+        color: var(--color-foreground);
+        text-decoration: none;
+      }
+    }
+  }
+
+  & .wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    border: 1px solid var(--color-neutral-200);
+    border-radius: 50%;
+
+    &::before {
+      position: absolute;
+      inset: 50px;
+      content: '';
+      border: 1px dashed var(--color-neutral-200);
+      border-radius: 50%;
+    }
+
+    &::after {
+      position: absolute;
+      inset: -50px;
+      content: '';
+      border: 1px dashed var(--color-neutral-200);
+      border-radius: 50%;
+    }
+
+    & .lines.one {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 350px;
+      border: 1px solid var(--color-neutral-200);
+      transform: translate(-50%, -50%);
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 450px;
+        height: 0;
+        content: '';
+        border: 1px dashed var(--color-neutral-200);
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+
+    & .lines.two {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 350px;
+      border: 1px solid var(--color-neutral-200);
+      transform: translate(-50%, -50%);
+    }
+
+    & .circle.one {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--color-neutral-100);
+      border-radius: 50%;
+      transform: translateX(-50%);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        border: inherit;
+        border-radius: 50%;
+        transform: translateX(100%);
+      }
+    }
+
+    & .circle.two {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--color-neutral-100);
+      border-radius: 50%;
+      transform: translateY(-50%);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        border: inherit;
+        border-radius: 50%;
+        transform: translateY(100%);
+      }
+    }
+
+    & .dot {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: var(--color-neutral-950);
+
+      &.one {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &.two {
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+
+      &.three {
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+
+      &.four {
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    & .outer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 700px;
+      height: 700px;
+      border: 1px solid var(--color-neutral-100);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.button {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--color-neutral-100);
+  border: none;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 -12px 24px var(--color-neutral-50),
+    0 12px 24px rgb(9 9 11 / 50%);
+  -webkit-tap-highlight-color: transparent;
+
+  & .noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: transparent url('/images/noise.png') repeat 0 0;
+    mix-blend-mode: overlay;
+    opacity: 0.85;
+  }
+
+  & .one {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 75%;
+    background: var(--color-neutral-200);
+    filter: blur(25px);
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+
+  & .two {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    background: var(--color-neutral-300);
+    filter: blur(25px);
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+
+  & span {
+    z-index: 100;
+    font-family: var(--font-mono);
+    font-size: var(--font-2xsm);
+    font-weight: 500;
+    color: var(--color-foreground);
+    text-transform: uppercase;
+  }
+}

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import styles from './sponsors.module.css';
 import { cn } from '@/helpers/styles';
 
-const sponsors = [
+export const sponsors = [
   {
     alt: 'Interfaces Logo',
     logo: '/sponsors/interfaces-logo.svg',

@@ -1,0 +1,58 @@
+---
+import { Container } from '@/components/container';
+import Layout from '@/layouts/layout.astro';
+import { x as designers } from '@/data/designers';
+---
+
+<Layout title="All Designers // DSGNRS">
+  <Container>
+    <header class="header">
+      <a href="/dsgnrs">[back]</a>
+    </header>
+
+    <section class="designers">
+      {
+        designers.map(designer => (
+          <a
+            href={`https://x.com/${designer.username}`}
+            rel="noreferrer"
+            target="_blank"
+          >
+            @{designer.username}
+          </a>
+        ))
+      }
+    </section>
+  </Container>
+</Layout>
+
+<style>
+  .header {
+    padding: 60px 0 30px;
+
+    & a {
+      font-family: var(--font-mono);
+      font-size: var(--font-2xsm);
+      font-weight: 500;
+      color: var(--color-foreground-subtler);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  .designers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 60px;
+
+    & a {
+      font-family: var(--font-mono);
+      font-size: var(--font-2xsm);
+      font-weight: 500;
+      color: var(--color-foreground);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+</style>
