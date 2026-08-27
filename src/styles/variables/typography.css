@@ -7,7 +7,7 @@
   --font-base-size: 1rem;
   --font-pos-ratio: 1.2;
   --font-neg-ratio: 1.125;
-  --font-3xlg: calc(var(--font-xxlg) * var(--font-pos-ratio));
+  --font-3xlg: calc(var(--font-2xlg) * var(--font-pos-ratio));
   --font-2xlg: calc(var(--font-xlg) * var(--font-pos-ratio));
   --font-xlg: calc(var(--font-lg) * var(--font-pos-ratio));
   --font-lg: calc(var(--font-md) * var(--font-pos-ratio));

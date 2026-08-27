@@ -1,0 +1,27 @@
+---
+import Layout from '@/layouts/layout.astro';
+---
+
+<Layout>
+  <div class="wrapper">
+    <a href="/">404</a>
+  </div>
+</Layout>
+
+<style>
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 100dvh;
+
+    & a {
+      font-family: var(--font-display);
+      font-size: var(--font-3xlg);
+      line-height: 1;
+      color: var(--color-foreground);
+      text-decoration: none;
+    }
+  }
+</style>
