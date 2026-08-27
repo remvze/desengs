@@ -1,0 +1,12 @@
+---
+import { SerendipityCanvas } from '@/components/serendipity';
+import { websites } from '@/data/websites';
+import Layout from '@/layouts/layout.astro';
+---
+
+<Layout
+  description="Explore a randomized infinite canvas of exceptional websites."
+  title="Serendipity // Inspiration"
+>
+  <SerendipityCanvas client:load websites={websites} />
+</Layout>

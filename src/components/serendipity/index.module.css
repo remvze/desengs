@@ -1,0 +1,114 @@
+:global(html),
+:global(body) {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.viewport {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  touch-action: none;
+  user-select: none;
+  background-color: var(--color-neutral-50);
+  background-image: linear-gradient(
+      var(--color-neutral-100) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, var(--color-neutral-100) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.imageCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  color: var(--color-foreground);
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  contain: layout paint;
+  backface-visibility: hidden;
+  will-change: transform;
+
+  & img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    border: 1px solid var(--color-neutral-200);
+  }
+}
+
+.header,
+.help {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: var(--font-2xsm);
+  color: var(--color-foreground-subtle);
+  text-transform: uppercase;
+  pointer-events: none;
+  background: var(--color-neutral-50);
+  border: 1px solid var(--color-neutral-300);
+
+  & span:last-child {
+    border-right: 0;
+  }
+}
+
+.header {
+  top: 12px;
+  left: 12px;
+
+  & a,
+  & span {
+    padding: 8px 10px;
+    border-right: 1px solid var(--color-neutral-300);
+  }
+
+  & a {
+    font-weight: 500;
+    color: var(--color-foreground);
+    text-decoration: none;
+    pointer-events: auto;
+  }
+}
+
+.help {
+  right: 12px;
+  bottom: 12px;
+
+  & span {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    top: 8px;
+    left: 8px;
+  }
+
+  .help {
+    right: 8px;
+    bottom: 8px;
+  }
+}
