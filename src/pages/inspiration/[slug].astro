@@ -1,0 +1,168 @@
+---
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from 'react-icons/io';
+
+import { Container } from '@/components/container';
+import { websites } from '@/data/websites';
+import { pickMany } from '@/helpers/random';
+import Layout from '@/layouts/layout.astro';
+import { formatDate } from '@/helpers/date';
+
+type Website = (typeof websites)[number];
+
+export function getStaticPaths() {
+  return websites.map(website => ({
+    params: { slug: website.slug },
+    props: { website },
+  }));
+}
+
+interface Props {
+  website: Website;
+}
+
+const { website } = Astro.props;
+const relatedWebsites = pickMany(
+  websites.filter(item => item.slug !== website.slug),
+  3,
+);
+---
+
+<Layout
+  description={`Website design inspiration from ${website.name}.`}
+  og={website.screenshot}
+  title={`${website.name} // Web Design Inspiration`}
+>
+  <Container>
+    <main>
+      <header class="header">
+        <a aria-label="Back to inspiration" class="back" href="/inspiration">
+          <IoIosArrowRoundBack />
+        </a>
+        <div class="title">
+          <h1>{website.name}</h1>
+          <a href={website.url} rel="noreferrer" target="_blank">
+            {website.address}<IoIosArrowRoundForward />
+          </a>
+        </div>
+      </header>
+
+      <a class="screenshot" href={website.url} rel="noreferrer" target="_blank">
+        <img alt={`${website.name} website`} src={website.screenshot} />
+      </a>
+
+      <section class="info">
+        <p>Added on {formatDate(new Date(website.date))}</p>
+      </section>
+
+      <section class="related">
+        <h2>More inspiration</h2>
+        <div class="websites">
+          {
+            relatedWebsites.map(item => (
+              <article class="website">
+                <a href={`/inspiration/${item.slug}`}>
+                  <img
+                    alt={`${item.name} website`}
+                    loading="lazy"
+                    src={item.screenshot}
+                  />
+                </a>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+    </main>
+  </Container>
+</Layout>
+
+<style>
+  main {
+    padding: 80px 0;
+  }
+
+  .header {
+    margin-bottom: 24px;
+  }
+
+  .back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 32px;
+    color: var(--color-foreground);
+    text-decoration: none;
+    background: var(--color-neutral-100);
+    border-radius: 50%;
+  }
+
+  .title {
+    & h1 {
+      font-family: var(--font-display);
+      font-size: var(--font-2xlg);
+    }
+
+    & a {
+      display: inline-flex;
+      gap: 2px;
+      align-items: center;
+      margin-top: 4px;
+      font-family: var(--font-mono);
+      font-size: var(--font-2xsm);
+      color: var(--color-foreground-subtle);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  .screenshot {
+    display: block;
+
+    & img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--color-neutral-300);
+    }
+  }
+
+  .info {
+    display: flex;
+    justify-content: end;
+    margin-top: 8px;
+    font-size: var(--font-xsm);
+    color: var(--color-foreground-subtler);
+  }
+
+  .related {
+    padding-top: 80px;
+
+    & h2 {
+      margin-bottom: 24px;
+      font-family: var(--font-display);
+      font-size: var(--font-lg);
+    }
+
+    & .websites {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .website {
+        & img {
+          display: block;
+          width: 100%;
+          aspect-ratio: 1920/1080;
+          border: 1px solid var(--color-neutral-300);
+          transition: transform 0.2s;
+
+          &:hover {
+            transform: scale(1.025);
+          }
+        }
+      }
+    }
+  }
+</style>

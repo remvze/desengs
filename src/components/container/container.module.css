@@ -4,6 +4,6 @@
   margin: 0 auto;
 
   &.wide {
-    max-width: 800px;
+    max-width: 1200px;
   }
 }
