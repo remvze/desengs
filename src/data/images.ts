@@ -474,6 +474,58 @@ const _images: Array<{
       url: 'https://modal.com',
     },
   },
+  {
+    date: '2026-08-28',
+    dimensions: {
+      height: 629,
+      width: 1200,
+    },
+    image: '2026-08-28-lovable-dev.webp',
+    source: {
+      address: 'lovable.dev',
+      name: 'Lovable',
+      url: 'https://lovable.dev',
+    },
+  },
+  {
+    date: '2026-08-28',
+    dimensions: {
+      height: 630,
+      width: 1200,
+    },
+    image: '2026-08-28-dirtverse-co.webp',
+    source: {
+      address: 'dirtverse.co',
+      name: 'Dirt',
+      url: 'https://dirtverse.co',
+    },
+  },
+  {
+    date: '2026-08-28',
+    dimensions: {
+      height: 1080,
+      width: 1920,
+    },
+    image: '2026-08-28-brightscout-com.webp',
+    source: {
+      address: 'brightscout.com',
+      name: 'Brightscout',
+      url: 'https://brightscout.com',
+    },
+  },
+  {
+    date: '2026-08-28',
+    dimensions: {
+      height: 627,
+      width: 1200,
+    },
+    image: '2026-08-28-patch-io.webp',
+    source: {
+      address: 'patch.io',
+      name: 'Patch',
+      url: 'https://patch.io',
+    },
+  },
 ];
 
 export const images = reverseArray(
