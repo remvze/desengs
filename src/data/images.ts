@@ -526,6 +526,19 @@ const _images: Array<{
       url: 'https://patch.io',
     },
   },
+  {
+    date: '2026-08-28',
+    dimensions: {
+      height: 630,
+      width: 1200,
+    },
+    image: '2026-08-28-idle-space.webp',
+    source: {
+      address: 'idle.space',
+      name: 'Idle',
+      url: 'https://idle.space',
+    },
+  },
 ];
 
 export const images = reverseArray(
