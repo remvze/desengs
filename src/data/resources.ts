@@ -831,6 +831,14 @@ const _resources: Resources = [
     title: 'Cuelume',
     url: 'https://cuelume.dev',
   },
+  {
+    date: '2026-08-28',
+    description: '',
+    format: 'read',
+    id: '',
+    title: 'On AI, systems, taste and the human filter',
+    url: 'https://shedsgns.me/taste',
+  },
 ];
 
 export const resources = reverseArray(_resources);
