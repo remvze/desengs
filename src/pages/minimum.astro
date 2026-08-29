@@ -1,0 +1,77 @@
+---
+import { IoIosArrowRoundBack } from 'react-icons/io';
+
+import Layout from '@/layouts/layout.astro';
+import { ShinyText } from '@/components/shiny-text';
+import { Container } from '@/components/container';
+import { MinimumWebsites } from '@/components/minimum-websites';
+import { websites } from '@/data/minimum';
+import { Sponsors } from '@/components/sponsors';
+---
+
+<Layout title="Minimal Websites Directory">
+  <Container>
+    <section class="hero">
+      <a href="/"><IoIosArrowRoundBack /></a>
+      <h1>
+        The <i>Directory</i> of<br />Super <i><ShinyText text="Minimal" /></i> Websites.
+      </h1>
+      <p>
+        <span>{websites.length.toString().padStart(3, '0')}</span> curated minimal
+        websites.
+      </p>
+
+      <Sponsors client:only="react">
+        <div class="cover" slot="fallback"></div>
+      </Sponsors>
+    </section>
+  </Container>
+
+  <MinimumWebsites client:load />
+</Layout>
+
+<style>
+  .hero {
+    padding: 120px 0 60px;
+
+    & a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      margin-bottom: 32px;
+      color: var(--color-foreground);
+      text-decoration: none;
+      background: var(--color-neutral-100);
+      border-radius: 50%;
+    }
+
+    & h1 {
+      font-family: var(--font-display);
+      font-size: var(--font-2xlg);
+      line-height: 1.2;
+
+      & i {
+        font-style: italic;
+      }
+    }
+
+    p {
+      margin-top: 20px;
+      color: var(--color-foreground-subtle);
+
+      & span {
+        font-family: var(--font-mono);
+        color: var(--color-foreground);
+      }
+    }
+  }
+
+  .cover {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: var(--color-neutral-50);
+  }
+</style>

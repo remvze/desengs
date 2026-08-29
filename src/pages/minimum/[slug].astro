@@ -2,7 +2,7 @@
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from 'react-icons/io';
 
 import { Container } from '@/components/container';
-import { websites } from '@/data/websites';
+import { websites } from '@/data/minimum';
 import { pickMany } from '@/helpers/random';
 import Layout from '@/layouts/layout.astro';
 import { formatDate } from '@/helpers/date';
@@ -28,14 +28,14 @@ const relatedWebsites = pickMany(
 ---
 
 <Layout
-  description={`Website design inspiration from ${website.name}.`}
+  description={`Minimal website design inspiration from ${website.name}.`}
   og={website.screenshot}
-  title={`${website.name} // Web Design Inspiration`}
+  title={`${website.name} // Minimal Website Directory`}
 >
   <Container>
     <main>
       <header class="header">
-        <a aria-label="Back to inspiration" class="back" href="/inspiration">
+        <a aria-label="Back to Minimum" class="back" href="/minimum">
           <IoIosArrowRoundBack />
         </a>
         <div class="title">
@@ -55,12 +55,12 @@ const relatedWebsites = pickMany(
       </section>
 
       <section class="related">
-        <h2>More inspiration</h2>
+        <h2>More minimal websites</h2>
         <div class="websites">
           {
             relatedWebsites.map(item => (
               <article class="website">
-                <a href={`/inspiration/${item.slug}`}>
+                <a href={`/minimum/${item.slug}`}>
                   <img
                     alt={`${item.name} website`}
                     loading="lazy"
@@ -124,7 +124,7 @@ const relatedWebsites = pickMany(
       display: block;
       width: 100%;
       height: auto;
-      aspect-ratio: 1920/1080;
+      aspect-ratio: 1/1;
       border: 1px solid var(--color-neutral-300);
     }
   }
@@ -155,7 +155,7 @@ const relatedWebsites = pickMany(
         & img {
           display: block;
           width: 100%;
-          aspect-ratio: 1920/1080;
+          aspect-ratio: 1/1;
           border: 1px solid var(--color-neutral-300);
           transition: transform 0.2s;
 
