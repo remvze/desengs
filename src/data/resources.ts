@@ -839,6 +839,15 @@ const _resources: Resources = [
     title: 'On AI, systems, taste and the human filter',
     url: 'https://shedsgns.me/taste',
   },
+  {
+    date: '2026-08-29',
+    description:
+      'Beautifully designed, copy-paste UI components for AI agent conversations: thinking states, tool calls, streaming text, citations, tables and more. Ships in React, Vue and Svelte.',
+    format: 'build',
+    id: '',
+    title: 'AICSS',
+    url: 'https://aicss.dev',
+  },
 ];
 
 export const resources = reverseArray(_resources);
