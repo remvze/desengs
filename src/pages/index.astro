@@ -6,9 +6,33 @@ import { Resources } from '@/components/resources';
 import { resources } from '@/data/resources';
 import Spacer from '@/components/spacer.astro';
 import Footer from '@/components/footer.astro';
+
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    description:
+      'Curated tools, articles, videos, communities, and inspiration for design engineers.',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: resources.map((resource, index) => ({
+        '@type': 'ListItem',
+        name: resource.title,
+        position: index + 1,
+        url: resource.url,
+      })),
+      numberOfItems: resources.length,
+    },
+    name: 'Design Engineering Resources',
+    url: new URL('/', Astro.site).toString(),
+  },
+];
 ---
 
-<Layout>
+<Layout
+  description="Curated tools, articles, videos, communities, and inspiration for design engineers working across design and code."
+  schemas={schemas}
+>
   <Hero />
   <Container>
     <Spacer />

@@ -6,6 +6,8 @@ import { websites } from '@/data/websites';
 import { pickMany } from '@/helpers/random';
 import Layout from '@/layouts/layout.astro';
 import { formatDate } from '@/helpers/date';
+import { tags } from '@/data/tags';
+import Breadcrumbs from '@/components/breadcrumbs.astro';
 
 type Website = (typeof websites)[number];
 
@@ -25,12 +27,36 @@ const relatedWebsites = pickMany(
   websites.filter(item => item.slug !== website.slug),
   3,
 );
+const tagNames = website.tags.slice(0, 2).map(tag => tags[tag]);
+const tagSummary = tagNames.join(', ');
+const pageUrl = new URL(`/inspiration/${website.slug}/`, Astro.site).toString();
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    about: {
+      '@type': 'WebSite',
+      name: website.name,
+      url: website.url,
+    },
+    datePublished: website.date,
+    description: `Curated web design inspiration featuring ${website.name}.`,
+    image: new URL(website.screenshot, Astro.site).toString(),
+    keywords: website.tags.map(tag => tags[tag]),
+    name: `${website.name} Website Design Inspiration`,
+    url: pageUrl,
+  },
+];
 ---
 
 <Layout
-  description={`Website design inspiration from ${website.name}.`}
+  description={`Explore ${website.name}, a curated ${tagSummary} website selected for the DesEngs web design inspiration gallery.`}
   og={website.screenshot}
-  title={`${website.name} // Web Design Inspiration`}
+  ogAlt={`Screenshot of the ${website.name} website`}
+  ogHeight={1080}
+  ogWidth={1920}
+  schemas={schemas}
+  title={`${website.name}: Website Design Inspiration`}
 >
   <Container>
     <main>
@@ -38,6 +64,13 @@ const relatedWebsites = pickMany(
         <a aria-label="Back to inspiration" class="back" href="/inspiration">
           <IoIosArrowRoundBack />
         </a>
+        <Breadcrumbs
+          items={[
+            { label: 'Home', url: '/' },
+            { label: 'Inspiration', url: '/inspiration' },
+            { label: website.name },
+          ]}
+        />
         <div class="title">
           <h1>{website.name}</h1>
           <a href={website.url} rel="noreferrer" target="_blank">

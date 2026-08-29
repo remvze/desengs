@@ -1,7 +1,6 @@
 ---
 import type { DesignEngineers } from '@/data/list';
 import { padNumber } from '@/helpers/number';
-import { Engineers } from './engineers';
 
 export interface Props {
   list: DesignEngineers;
@@ -15,7 +14,21 @@ const list = Astro.props.list;
     (<span>{padNumber(list.length, 3)}</span> design engineers)
   </div>
 
-  <Engineers client:load engineers={list} />
+  <ul>
+    {
+      list.map(engineer => (
+        <li>
+          {engineer.website ? (
+            <a href={engineer.website} rel="noreferrer" target="_blank">
+              {engineer.name}
+            </a>
+          ) : (
+            engineer.name
+          )}
+        </li>
+      ))
+    }
+  </ul>
 </section>
 
 <style>

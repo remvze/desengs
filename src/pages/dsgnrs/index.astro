@@ -1,8 +1,32 @@
 ---
 import Layout from '@/layouts/layout.astro';
 import { App } from '@/components/dsgnrs';
+import { x as designers } from '@/data/designers';
+
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: designers.map((designer, index) => ({
+        '@type': 'ListItem',
+        name: `@${designer.username}`,
+        position: index + 1,
+        url: `https://x.com/${designer.username}`,
+      })),
+      numberOfItems: designers.length,
+    },
+    name: 'DSGNRS: Exceptional Designers to Follow',
+    url: new URL('/dsgnrs/', Astro.site).toString(),
+  },
+];
 ---
 
-<Layout title="DSGNRS: Exceptional Designer to Follow">
+<Layout
+  description="Discover exceptional product designers, visual designers, and design engineers worth following for ideas and inspiration."
+  schemas={schemas}
+  title="DSGNRS: Exceptional Designers to Follow"
+>
   <App client:load />
 </Layout>

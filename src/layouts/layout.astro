@@ -1,44 +1,115 @@
 ---
 import '@/styles/global.css';
+import { SEO } from 'astro-seo';
 
 interface Props {
   description?: string;
+  noindex?: boolean;
   og?: string;
+  ogAlt?: string;
+  ogHeight?: number;
+  ogWidth?: number;
+  schemas?: Record<string, unknown>[];
   title?: string;
 }
 
-const title = Astro.props.title
-  ? `${Astro.props.title} — DesEngs`
-  : 'DesEngs: Resources for Design Engineers';
+const title = Astro.props.title;
+const titleDefault = 'DesEngs: Resources for Design Engineers';
+const resolvedTitle = title ? `${title} — DesEngs` : titleDefault;
 
 const description =
   Astro.props.description ||
   'A curated collection of design engineering resources.';
 
-const og = Astro.props.og || '/og.png';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const og = new URL(Astro.props.og || '/og.png', Astro.site).toString();
+const ogAlt = Astro.props.ogAlt || `${resolvedTitle} social preview`;
+const ogHeight = Astro.props.ogHeight ?? (Astro.props.og ? undefined : 630);
+const ogWidth = Astro.props.ogWidth ?? (Astro.props.og ? undefined : 1200);
+const organizationId = new URL('/#organization', Astro.site).toString();
+const websiteId = new URL('/#website', Astro.site).toString();
+const globalSchemas = Astro.props.noindex
+  ? []
+  : [
+      {
+        '@context': 'https://schema.org',
+        '@id': organizationId,
+        '@type': 'Organization',
+        logo: new URL('/logo.svg', Astro.site).toString(),
+        name: 'DesEngs',
+        url: new URL('/', Astro.site).toString(),
+      },
+      {
+        '@context': 'https://schema.org',
+        '@id': websiteId,
+        '@type': 'WebSite',
+        description:
+          'Curated resources and inspiration for design engineers working across design and code.',
+        inLanguage: 'en',
+        name: 'DesEngs',
+        publisher: { '@id': organizationId },
+        url: new URL('/', Astro.site).toString(),
+      },
+    ];
+const schemas = [...globalSchemas, ...(Astro.props.schemas || [])];
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
     <meta content="width=device-width" name="viewport" />
     <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
     <meta content={Astro.generator} name="generator" />
     <meta content="#18181b" name="theme-color" />
 
-    <title>{title}</title>
-    <meta content={title} name="title" />
-    <meta content={description} name="description" />
-
-    <meta content={title} property="og:title" />
-    <meta content={description} property="og:description" />
-    <meta content="DesEngs" property="og:site_name" />
-    <meta content="https://desengs.com/" property="og:url" />
-    <meta content="website" property="og:type" />
-    <meta content={`https://desengs.com${og}`} property="og:image" />
+    <SEO
+      canonical={canonical}
+      charset="UTF-8"
+      description={description}
+      noindex={Astro.props.noindex}
+      robotsExtras="max-image-preview:large"
+      title={title}
+      titleDefault={titleDefault}
+      titleTemplate="%s — DesEngs"
+      openGraph={{
+        basic: {
+          image: og,
+          title: resolvedTitle,
+          type: 'website',
+          url: canonical.toString(),
+        },
+        image: {
+          alt: ogAlt,
+          height: ogHeight,
+          type: og.endsWith('.webp') ? 'image/webp' : 'image/png',
+          width: ogWidth,
+        },
+        optional: {
+          description,
+          locale: 'en_US',
+          siteName: 'DesEngs',
+        },
+      }}
+      twitter={{
+        card: 'summary_large_image',
+        description,
+        image: og,
+        imageAlt: ogAlt,
+        title: resolvedTitle,
+      }}
+    />
 
     <link href="/sitemap-index.xml" rel="sitemap" />
+
+    {
+      schemas.map(schema => (
+        <script
+          is:inline
+          set:html={JSON.stringify(schema).replace(/</g, '\\u003c')}
+          type="application/ld+json"
+        />
+      ))
+    }
   </head>
   <body>
     <slot />

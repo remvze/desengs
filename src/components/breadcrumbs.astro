@@ -1,0 +1,87 @@
+---
+interface Item {
+  label: string;
+  url?: string;
+}
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, index) => ({
+    '@type': 'ListItem',
+    item: item.url ? new URL(item.url, Astro.site).toString() : Astro.url.href,
+    name: item.label,
+    position: index + 1,
+  })),
+};
+---
+
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+  <ol>
+    {
+      items.map((item, index) => (
+        <li>
+          {item.url ? (
+            <a href={item.url}>{item.label}</a>
+          ) : (
+            <span aria-current="page">{item.label}</span>
+          )}
+          {index < items.length - 1 && (
+            <span aria-hidden="true" class="separator">
+              /
+            </span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+
+<script
+  is:inline
+  set:html={JSON.stringify(schema).replace(/</g, '\u003c')}
+  type="application/ld+json"
+/>
+
+<style>
+  .breadcrumbs {
+    margin-bottom: 24px;
+    font-family: var(--font-mono);
+    font-size: var(--font-2xsm);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    gap: 8px;
+  }
+
+  a {
+    color: var(--color-foreground-subtle);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-foreground);
+  }
+
+  [aria-current='page'],
+  .separator {
+    color: var(--color-foreground-subtler);
+  }
+</style>

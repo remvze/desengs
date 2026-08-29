@@ -6,6 +6,7 @@ import { images } from '@/data/images';
 import { formatDate } from '@/helpers/date';
 import { pickMany } from '@/helpers/random';
 import Layout from '@/layouts/layout.astro';
+import Breadcrumbs from '@/components/breadcrumbs.astro';
 
 type Image = (typeof images)[number];
 
@@ -25,12 +26,34 @@ const relatedImages = pickMany(
   images.filter(item => item.slug !== image.slug),
   3,
 );
+const pageUrl = new URL(
+  `/inspiration/og/${image.slug}/`,
+  Astro.site,
+).toString();
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    caption: `Open Graph image created for ${image.source.name}.`,
+    contentUrl: new URL(image.image, Astro.site).toString(),
+    datePublished: image.date,
+    height: image.dimensions.height,
+    name: `${image.source.name} Open Graph Image`,
+    representativeOfPage: true,
+    url: pageUrl,
+    width: image.dimensions.width,
+  },
+];
 ---
 
 <Layout
-  description={`OG image inspiration from ${image.source.name}.`}
+  description={`Explore the Open Graph social sharing image created for ${image.source.name}, curated for the DesEngs OG image inspiration gallery.`}
   og={image.image}
-  title={`${image.source.name} // OG Image Inspiration`}
+  ogAlt={`Open Graph image created for ${image.source.name}`}
+  ogHeight={image.dimensions.height}
+  ogWidth={image.dimensions.width}
+  schemas={schemas}
+  title={`${image.source.name}: OG Image Inspiration`}
 >
   <Container>
     <main>
@@ -42,6 +65,14 @@ const relatedImages = pickMany(
         >
           <IoIosArrowRoundBack />
         </a>
+        <Breadcrumbs
+          items={[
+            { label: 'Home', url: '/' },
+            { label: 'Inspiration', url: '/inspiration' },
+            { label: 'OG Images', url: '/inspiration/og' },
+            { label: image.source.name },
+          ]}
+        />
         <div class="title">
           <h1>{image.source.name}</h1>
           <a href={image.source.url} rel="noreferrer" target="_blank">

@@ -7,12 +7,43 @@ import { Container } from '@/components/container';
 import { Images } from '@/components/images';
 import { images } from '@/data/images';
 import { Sponsors } from '@/components/sponsors';
+import Breadcrumbs from '@/components/breadcrumbs.astro';
+
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: images.map((image, index) => ({
+        '@type': 'ListItem',
+        name: `${image.source.name} Open Graph image`,
+        position: index + 1,
+        url: new URL(`/inspiration/og/${image.slug}`, Astro.site).toString(),
+      })),
+      numberOfItems: images.length,
+    },
+    name: 'Open Graph Image Design Inspiration',
+    url: new URL('/inspiration/og/', Astro.site).toString(),
+  },
+];
 ---
 
-<Layout title="OG Image Inspiration">
+<Layout
+  description={`Explore ${images.length} curated Open Graph image designs for inspiration when creating social sharing previews.`}
+  schemas={schemas}
+  title="Open Graph Image Design Inspiration"
+>
   <Container>
     <section class="hero">
       <a href="/inspiration"><IoIosArrowRoundBack /></a>
+      <Breadcrumbs
+        items={[
+          { label: 'Home', url: '/' },
+          { label: 'Inspiration', url: '/inspiration' },
+          { label: 'OG Images' },
+        ]}
+      />
       <h1>
         Gallery of <i><ShinyText text="Beautiful" /></i><br />OG <i>Images.</i>
       </h1>
@@ -28,7 +59,7 @@ import { Sponsors } from '@/components/sponsors';
   </Container>
 
   <Container wide>
-    <Images client:only />
+    <Images client:load />
   </Container>
 </Layout>
 

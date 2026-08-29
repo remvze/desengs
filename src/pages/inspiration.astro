@@ -8,9 +8,32 @@ import { Websites } from '@/components/websites';
 import { websites } from '@/data/websites';
 import { Sponsors } from '@/components/sponsors';
 import { Link } from '@/components/link';
+
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: websites.map((website, index) => ({
+        '@type': 'ListItem',
+        name: website.name,
+        position: index + 1,
+        url: new URL(`/inspiration/${website.slug}`, Astro.site).toString(),
+      })),
+      numberOfItems: websites.length,
+    },
+    name: 'Curated Web Design Inspiration',
+    url: new URL('/inspiration/', Astro.site).toString(),
+  },
+];
 ---
 
-<Layout title="Web Design Inspiration">
+<Layout
+  description={`Explore ${websites.length} curated websites showcasing exceptional visual design, typography, interaction, and creative development.`}
+  schemas={schemas}
+  title="Curated Web Design Inspiration"
+>
   <Container>
     <section class="hero">
       <a href="/"><IoIosArrowRoundBack /></a>

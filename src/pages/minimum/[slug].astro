@@ -6,6 +6,7 @@ import { websites } from '@/data/minimum';
 import { pickMany } from '@/helpers/random';
 import Layout from '@/layouts/layout.astro';
 import { formatDate } from '@/helpers/date';
+import Breadcrumbs from '@/components/breadcrumbs.astro';
 
 type Website = (typeof websites)[number];
 
@@ -25,12 +26,34 @@ const relatedWebsites = pickMany(
   websites.filter(item => item.slug !== website.slug),
   3,
 );
+const isRecurringWebsite =
+  websites.filter(item => item.name === website.name).length > 1;
+const snapshotLabel = isRecurringWebsite ? ` (${website.date})` : '';
+const pageUrl = new URL(`/minimum/${website.slug}/`, Astro.site).toString();
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    about: {
+      '@type': 'WebSite',
+      name: website.name,
+      url: website.url,
+    },
+    datePublished: website.date,
+    description: `Curated minimal website design inspiration featuring ${website.name}.`,
+    image: new URL(website.screenshot, Astro.site).toString(),
+    name: `${website.name} Minimal Website Inspiration`,
+    url: pageUrl,
+  },
+];
 ---
 
 <Layout
-  description={`Minimal website design inspiration from ${website.name}.`}
+  description={`Explore the restrained typography and layout of ${website.name}${isRecurringWebsite ? ` as captured on ${website.date}` : ''}, curated for the DesEngs minimal website design directory.`}
   og={website.screenshot}
-  title={`${website.name} // Minimal Website Directory`}
+  ogAlt={`Screenshot of the minimal ${website.name} website`}
+  schemas={schemas}
+  title={`${website.name}: Minimal Website Inspiration${snapshotLabel}`}
 >
   <Container>
     <main>
@@ -38,6 +61,13 @@ const relatedWebsites = pickMany(
         <a aria-label="Back to Minimum" class="back" href="/minimum">
           <IoIosArrowRoundBack />
         </a>
+        <Breadcrumbs
+          items={[
+            { label: 'Home', url: '/' },
+            { label: 'Minimum', url: '/minimum' },
+            { label: website.name },
+          ]}
+        />
         <div class="title">
           <h1>{website.name}</h1>
           <a href={website.url} rel="noreferrer" target="_blank">

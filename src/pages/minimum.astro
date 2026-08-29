@@ -7,9 +7,32 @@ import { Container } from '@/components/container';
 import { MinimumWebsites } from '@/components/minimum-websites';
 import { websites } from '@/data/minimum';
 import { Sponsors } from '@/components/sponsors';
+
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: websites.map((website, index) => ({
+        '@type': 'ListItem',
+        name: website.name,
+        position: index + 1,
+        url: new URL(`/minimum/${website.slug}`, Astro.site).toString(),
+      })),
+      numberOfItems: websites.length,
+    },
+    name: 'Minimal Website Design Directory',
+    url: new URL('/minimum/', Astro.site).toString(),
+  },
+];
 ---
 
-<Layout title="Minimal Websites Directory">
+<Layout
+  description={`Browse ${websites.length} curated minimal websites with restrained typography, thoughtful layouts, and clear visual design.`}
+  schemas={schemas}
+  title="Minimal Website Design Directory"
+>
   <Container>
     <section class="hero">
       <a href="/"><IoIosArrowRoundBack /></a>

@@ -2,13 +2,25 @@
 import { Container } from '@/components/container';
 import Layout from '@/layouts/layout.astro';
 import { x as designers } from '@/data/designers';
+import Breadcrumbs from '@/components/breadcrumbs.astro';
 ---
 
-<Layout title="All Designers // DSGNRS">
+<Layout
+  description={`Browse all ${designers.length} exceptional designers curated by DesEngs and find new creative practitioners to follow.`}
+  title="All Curated Designers — DSGNRS"
+>
   <Container>
     <header class="header">
       <a href="/dsgnrs">[back]</a>
     </header>
+
+    <Breadcrumbs
+      items={[
+        { label: 'Home', url: '/' },
+        { label: 'DSGNRS', url: '/dsgnrs' },
+        { label: 'All Designers' },
+      ]}
+    />
 
     <section class="designers">
       {

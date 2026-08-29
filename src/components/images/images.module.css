@@ -1,6 +1,20 @@
 .images {
   padding-bottom: 90px;
 
+  & .masonry {
+    display: flex;
+    width: auto;
+    margin-left: -20px;
+  }
+
+  & .column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+    background-clip: padding-box;
+  }
+
   & .og {
     width: 100%;
 
@@ -13,6 +27,7 @@
       & img {
         display: block;
         width: 100%;
+        height: auto;
         border-radius: 0;
       }
     }

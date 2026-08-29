@@ -5,8 +5,8 @@ import Layout from '@/layouts/layout.astro';
 ---
 
 <Layout
-  description="Explore a randomized infinite canvas of exceptional websites."
-  title="Serendipity // Inspiration"
+  description={`Explore a randomized infinite canvas of ${websites.length} curated websites and discover unexpected web design inspiration.`}
+  title="Serendipity: Random Web Design Inspiration"
 >
   <SerendipityCanvas client:load websites={websites} />
 </Layout>
