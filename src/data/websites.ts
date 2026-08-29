@@ -822,6 +822,38 @@ const _websites: Array<{
     tags: ['creative', 'portfolio', 'typographic'],
     url: 'https://nounagency.com',
   },
+  {
+    address: 'jasonbergh.com',
+    date: '2026-08-29',
+    name: 'Jason Bergh',
+    screenshot: '/images/screenshots/2026-08-29-jasonbergh-com.webp',
+    tags: ['typographic', 'creative', 'personal-website', 'portfolio'],
+    url: 'https://jasonbergh.com',
+  },
+  {
+    address: 'ornn.com',
+    date: '2026-08-29',
+    name: 'Ornn',
+    screenshot: '/images/screenshots/2026-08-29-ornn-com.webp',
+    tags: ['landing-page', 'dark-mode'],
+    url: 'https://ornn.com',
+  },
+  {
+    address: 'antimetal.com',
+    date: '2026-08-29',
+    name: 'Antimetal',
+    screenshot: '/images/screenshots/2026-08-29-antimetal-com.webp',
+    tags: ['landing-page', 'minimal'],
+    url: 'https://antimetal.com',
+  },
+  {
+    address: 'primora.xyz',
+    date: '2026-08-29',
+    name: 'Primora',
+    screenshot: '/images/screenshots/2026-08-29-primora-xyz.webp',
+    tags: ['dark-mode', 'landing-page'],
+    url: 'https://primora.xyz',
+  },
 ];
 
 export const websites = reverseArray(
