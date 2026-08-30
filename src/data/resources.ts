@@ -848,6 +848,15 @@ const _resources: Resources = [
     title: 'AICSS',
     url: 'https://aicss.dev',
   },
+  {
+    date: '2026-08-30',
+    description:
+      'Dot Matrix is a React component library of dot matrix loaders—expressive loading primitives you install via the shadcn registry and own as local code.',
+    format: 'build',
+    id: '',
+    title: 'Dot Matrix',
+    url: 'https://dotmatrix.zzzzshawn.cloud',
+  },
 ];
 
 export const resources = reverseArray(_resources);
