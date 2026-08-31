@@ -854,6 +854,38 @@ const _websites: Array<{
     tags: ['dark-mode', 'landing-page'],
     url: 'https://primora.xyz',
   },
+  {
+    address: 'griffin.com',
+    date: '2026-08-31',
+    name: 'Griffin',
+    screenshot: '/images/screenshots/2026-08-31-griffin-com.webp',
+    tags: ['landing-page', 'business-finance', 'dark-mode'],
+    url: 'https://griffin.com',
+  },
+  {
+    address: 'giallo.studio',
+    date: '2026-08-31',
+    name: 'giallo.studio',
+    screenshot: '/images/screenshots/2026-08-31-giallo-studio.webp',
+    tags: ['dark-mode', 'minimal', 'creative', 'portfolio'],
+    url: 'https://giallo.studio',
+  },
+  {
+    address: 'helenedelmarmol.com',
+    date: '2026-08-31',
+    name: 'Hélène del Marmol',
+    screenshot: '/images/screenshots/2026-08-31-helenedelmarmol-com.webp',
+    tags: ['creative', 'portfolio', 'personal-website'],
+    url: 'https://helenedelmarmol.com',
+  },
+  {
+    address: 'tikhon.io',
+    date: '2026-08-31',
+    name: 'Tikhon Belousko',
+    screenshot: '/images/screenshots/2026-08-31-tikhon-io.webp',
+    tags: ['dark-mode', 'portfolio', 'technology', 'personal-website'],
+    url: 'https://tikhon.io',
+  },
 ];
 
 export const websites = reverseArray(
