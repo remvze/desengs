@@ -1189,6 +1189,34 @@ const _websites: Array<{
     screenshot: '2026-08-27-designcult-us.webp',
     url: 'https://designcult.us',
   },
+  {
+    address: 'cormac.so',
+    date: '2026-08-31',
+    name: 'Cormac Hayden',
+    screenshot: '2026-08-31-cormac-so.webp',
+    url: 'https://cormac.so',
+  },
+  {
+    address: 'danielhowells.com',
+    date: '2026-08-31',
+    name: 'Daniel Howells',
+    screenshot: '2026-08-31-danielhowells-com.webp',
+    url: 'https://danielhowells.com',
+  },
+  {
+    address: 'flowercomputer.com',
+    date: '2026-08-31',
+    name: 'Flower Computer Company',
+    screenshot: '2026-08-31-flowercomputer-com.webp',
+    url: 'https://flowercomputer.com',
+  },
+  {
+    address: 'antoinefoucault.com',
+    date: '2026-08-31',
+    name: 'antoine foucault',
+    screenshot: '2026-08-31-antoinefoucault-com.webp',
+    url: 'https://antoinefoucault.com',
+  },
 ];
 
 export const websites = reverseArray(
