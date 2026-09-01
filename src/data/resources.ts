@@ -857,6 +857,15 @@ const _resources: Resources = [
     title: 'Dot Matrix',
     url: 'https://dotmatrix.zzzzshawn.cloud',
   },
+  {
+    date: '2026-09-01',
+    description:
+      'A small library of extremely crafted, copy-paste components for chat agents, thinking states, human-in-the-loop approvals, and everything agents need to talk to humans beautifully.',
+    format: 'build',
+    id: '',
+    title: 'Beautiful UI',
+    url: 'https://beautifului.dev',
+  },
 ];
 
 export const resources = reverseArray(_resources);
