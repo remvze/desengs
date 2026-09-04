@@ -866,6 +866,24 @@ const _resources: Resources = [
     title: 'Beautiful UI',
     url: 'https://beautifului.dev',
   },
+  {
+    date: '2026-09-04',
+    description:
+      'Search shadcn UI blocks, components and templates across the shadcn registries',
+    format: 'browse',
+    id: '',
+    title: 'Shoogle',
+    url: 'https://shoogle.dev',
+  },
+  {
+    date: '2026-09-04',
+    description:
+      'Open-source JS library for displaying independent columns, opposite directions: a continuous animated image pattern for the web.',
+    format: 'build',
+    id: '',
+    title: 'Images in motion',
+    url: 'https://iim.smartsquad.io',
+  },
 ];
 
 export const resources = reverseArray(_resources);
