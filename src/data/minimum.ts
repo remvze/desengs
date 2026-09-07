@@ -1217,6 +1217,34 @@ const _websites: Array<{
     screenshot: '2026-08-31-antoinefoucault-com.webp',
     url: 'https://antoinefoucault.com',
   },
+  {
+    address: 'arikko.dev',
+    date: '2026-09-07',
+    name: 'Arik Chakma',
+    screenshot: '2026-09-07-arikko-dev.webp',
+    url: 'https://arikko.dev',
+  },
+  {
+    address: 'sutharjay.com',
+    date: '2026-09-07',
+    name: 'Jay Suthar',
+    screenshot: '2026-09-07-sutharjay-com.webp',
+    url: 'https://sutharjay.com',
+  },
+  {
+    address: 'familyoffice.is',
+    date: '2026-09-07',
+    name: 'Family Office',
+    screenshot: '2026-09-07-familyoffice-is.webp',
+    url: 'https://familyoffice.is',
+  },
+  {
+    address: 'travisstreet.com',
+    date: '2026-09-07',
+    name: 'Travis Street',
+    screenshot: '2026-09-07-travisstreet-com.webp',
+    url: 'https://travisstreet.com',
+  },
 ];
 
 export const websites = reverseArray(
