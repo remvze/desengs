@@ -884,6 +884,15 @@ const _resources: Resources = [
     title: 'Images in motion',
     url: 'https://iim.smartsquad.io',
   },
+  {
+    date: '2026-09-07',
+    description:
+      'Splits text into lines, words and characters exactly where the browser already broke it.',
+    format: 'build',
+    id: '',
+    title: 'kugiri',
+    url: 'https://edoardolunardi.github.io/kugiri/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
