@@ -1245,6 +1245,13 @@ const _websites: Array<{
     screenshot: '2026-09-07-travisstreet-com.webp',
     url: 'https://travisstreet.com',
   },
+  {
+  address: 'jckhlry.com',
+  date: '2026-09-09',
+  name: 'Jack Hillery',
+  screenshot: '2026-09-09-jckhlry-com.webp',
+  url: 'https://jckhlry.com',
+ },
 ];
 
 export const websites = reverseArray(
