@@ -1,13 +1,13 @@
 ---
 import { IoIosArrowRoundBack } from 'react-icons/io';
 
-import Layout from '@/layouts/layout.astro';
-import { ShinyText } from '@/components/shiny-text';
+import Breadcrumbs from '@/components/breadcrumbs.astro';
 import { Container } from '@/components/container';
-import { Websites } from '@/components/websites';
-import { websites } from '@/data/websites';
+import { Portfolios } from '@/components/portfolios';
 import { Sponsors } from '@/components/sponsors';
-import { Link } from '@/components/link';
+import { portfolios } from '@/data/portfolios';
+import { ShinyText } from '@/components/shiny-text';
+import Layout from '@/layouts/layout.astro';
 
 const schemas = [
   {
@@ -15,50 +15,56 @@ const schemas = [
     '@type': 'CollectionPage',
     mainEntity: {
       '@type': 'ItemList',
-      itemListElement: websites.map((website, index) => ({
+      itemListElement: portfolios.map((portfolio, index) => ({
         '@type': 'ListItem',
-        name: website.name,
+        name: portfolio.name,
         position: index + 1,
-        url: new URL(`/inspiration/${website.slug}`, Astro.site).toString(),
+        url: new URL(
+          `/inspiration/portfolios/${portfolio.slug}`,
+          Astro.site,
+        ).toString(),
       })),
-      numberOfItems: websites.length,
+      numberOfItems: portfolios.length,
     },
-    name: 'Curated Web Design Inspiration',
-    url: new URL('/inspiration/', Astro.site).toString(),
+    name: 'Curated Portfolio Design Inspiration',
+    url: new URL('/inspiration/portfolios/', Astro.site).toString(),
   },
 ];
 ---
 
 <Layout
-  description={`Explore ${websites.length} curated websites showcasing exceptional visual design, typography, interaction, and creative development.`}
+  description={`Explore ${portfolios.length} curated individual and collective portfolios showcasing exceptional design and creative development.`}
   schemas={schemas}
-  title="Curated Web Design Inspiration"
+  title="Curated Portfolio Design Inspiration"
 >
   <Container>
     <section class="hero">
-      <a href="/"><IoIosArrowRoundBack /></a>
+      <a aria-label="Back to inspiration" href="/inspiration">
+        <IoIosArrowRoundBack />
+      </a>
+      <Breadcrumbs
+        items={[
+          { label: 'Home', url: '/' },
+          { label: 'Inspiration', url: '/inspiration' },
+          { label: 'Portfolios' },
+        ]}
+      />
       <h1>
-        The <i>Daily</i> Web<br />Design <i><ShinyText text="Inspiration" />.</i
-        >
+        Archive of <i><ShinyText text="Exceptional" /></i><br /><i>Portfolio</i>
+        Websites.
       </h1>
       <p>
-        <span>{websites.length.toString().padStart(3, '0')}</span> well-designed
-        websites.
+        <span>{portfolios.length.toString().padStart(3, '0')}</span> well-designed
+        portfolios.
       </p>
 
       <Sponsors client:only="react">
         <div class="cover" slot="fallback"></div>
       </Sponsors>
-
-      <div class="links">
-        <Link text="Serendipity" url="/inspiration/serendipity" />
-        <Link text="Portfolios" url="/inspiration/portfolios" />
-        <Link text="OG Images" url="/inspiration/og" />
-      </div>
     </section>
   </Container>
 
-  <Websites client:load />
+  <Portfolios />
 </Layout>
 
 <style>
@@ -88,7 +94,7 @@ const schemas = [
       }
     }
 
-    p {
+    & p {
       margin-top: 20px;
       color: var(--color-foreground-subtle);
 
@@ -96,12 +102,6 @@ const schemas = [
         font-family: var(--font-mono);
         color: var(--color-foreground);
       }
-    }
-
-    & .links {
-      display: flex;
-      gap: 8px;
-      margin-top: 28px;
     }
   }
 

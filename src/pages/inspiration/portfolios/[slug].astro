@@ -1,0 +1,214 @@
+---
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from 'react-icons/io';
+
+import Breadcrumbs from '@/components/breadcrumbs.astro';
+import { Container } from '@/components/container';
+import { portfolios } from '@/data/portfolios';
+import { formatDate } from '@/helpers/date';
+import { pickMany } from '@/helpers/random';
+import Layout from '@/layouts/layout.astro';
+
+type Portfolio = (typeof portfolios)[number];
+
+export function getStaticPaths() {
+  return portfolios.map(portfolio => ({
+    params: { slug: portfolio.slug },
+    props: { portfolio },
+  }));
+}
+
+interface Props {
+  portfolio: Portfolio;
+}
+
+const { portfolio } = Astro.props;
+const relatedPortfolios = pickMany(
+  portfolios.filter(item => item.slug !== portfolio.slug),
+  3,
+);
+const category =
+  portfolio.category === 'individual' ? 'individual' : 'collective';
+const pageUrl = new URL(
+  `/inspiration/portfolios/${portfolio.slug}/`,
+  Astro.site,
+).toString();
+const schemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    about: {
+      '@type': 'WebSite',
+      name: portfolio.name,
+      url: portfolio.url,
+    },
+    datePublished: portfolio.date,
+    description: `Curated portfolio design inspiration featuring ${portfolio.name}.`,
+    image: new URL(portfolio.screenshot, Astro.site).toString(),
+    keywords: [category, 'portfolio design', 'web design inspiration'],
+    name: `${portfolio.name} Portfolio Design Inspiration`,
+    url: pageUrl,
+  },
+];
+---
+
+<Layout
+  description={`Explore ${portfolio.name}, a curated ${category} portfolio selected for the DesEngs portfolio design inspiration gallery.`}
+  og={portfolio.screenshot}
+  ogAlt={`Screenshot of the ${portfolio.name} portfolio`}
+  ogHeight={1080}
+  ogWidth={1920}
+  schemas={schemas}
+  title={`${portfolio.name}: Portfolio Design Inspiration`}
+>
+  <Container>
+    <main>
+      <header class="header">
+        <a
+          aria-label="Back to portfolio inspiration"
+          class="back"
+          href="/inspiration/portfolios"
+        >
+          <IoIosArrowRoundBack />
+        </a>
+        <Breadcrumbs
+          items={[
+            { label: 'Home', url: '/' },
+            { label: 'Inspiration', url: '/inspiration' },
+            { label: 'Portfolios', url: '/inspiration/portfolios' },
+            { label: portfolio.name },
+          ]}
+        />
+        <div class="title">
+          <h1>{portfolio.name}</h1>
+          <a href={portfolio.url} rel="noreferrer" target="_blank">
+            {portfolio.address}<IoIosArrowRoundForward />
+          </a>
+        </div>
+      </header>
+
+      <a
+        class="screenshot"
+        href={portfolio.url}
+        rel="noreferrer"
+        target="_blank"
+      >
+        <img alt={`${portfolio.name} portfolio`} src={portfolio.screenshot} />
+      </a>
+
+      <section class="info">
+        <p>Added on {formatDate(new Date(portfolio.date))}</p>
+      </section>
+
+      <section class="related">
+        <h2>More portfolios</h2>
+        <div class="portfolios">
+          {
+            relatedPortfolios.map(item => (
+              <article class="portfolio">
+                <a href={`/inspiration/portfolios/${item.slug}`}>
+                  <img
+                    alt={`${item.name} portfolio`}
+                    loading="lazy"
+                    src={item.screenshot}
+                  />
+                </a>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+    </main>
+  </Container>
+</Layout>
+
+<style>
+  main {
+    padding: 80px 0;
+  }
+
+  .header {
+    margin-bottom: 24px;
+  }
+
+  .back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 32px;
+    color: var(--color-foreground);
+    text-decoration: none;
+    background: var(--color-neutral-100);
+    border-radius: 50%;
+  }
+
+  .title {
+    & h1 {
+      font-family: var(--font-display);
+      font-size: var(--font-2xlg);
+    }
+
+    & a {
+      display: inline-flex;
+      gap: 2px;
+      align-items: center;
+      margin-top: 4px;
+      font-family: var(--font-mono);
+      font-size: var(--font-2xsm);
+      color: var(--color-foreground-subtle);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  .screenshot {
+    display: block;
+
+    & img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1920/1080;
+      object-fit: cover;
+      border: 1px solid var(--color-neutral-300);
+    }
+  }
+
+  .info {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+    font-size: var(--font-xsm);
+    color: var(--color-foreground-subtler);
+  }
+
+  .related {
+    padding-top: 80px;
+
+    & h2 {
+      margin-bottom: 24px;
+      font-family: var(--font-display);
+      font-size: var(--font-lg);
+    }
+
+    & .portfolios {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      & .portfolio img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1920/1080;
+        object-fit: cover;
+        border: 1px solid var(--color-neutral-300);
+        transition: transform 0.2s;
+
+        &:hover {
+          transform: scale(1.025);
+        }
+      }
+    }
+  }
+</style>
