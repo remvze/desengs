@@ -368,6 +368,38 @@ const _portfolios: Array<Portfolio> = [
     screenshot: '2026-09-09-jackentee-com.webp',
     url: 'https://jackentee.com',
   },
+  {
+    address: 'voyeurverite.com',
+    category: 'collective',
+    date: '2026-09-10',
+    name: 'Voyeur Vérité',
+    screenshot: '2026-09-10-voyeurverite-com.webp',
+    url: 'https://voyeurverite.com',
+  },
+  {
+    address: 'nwiesner.com',
+    category: 'individual',
+    date: '2026-09-10',
+    name: 'Nick Wiesner',
+    screenshot: '2026-09-10-nwiesner-com.webp',
+    url: 'https://nwiesner.com',
+  },
+  {
+    address: 'sananes.co',
+    category: 'individual',
+    date: '2026-09-10',
+    name: 'Aaron Sananes',
+    screenshot: '2026-09-10-sananes-co.webp',
+    url: 'https://sananes.co',
+  },
+  {
+    address: 'ko-collective.com',
+    category: 'collective',
+    date: '2026-09-10',
+    name: 'KO Collective',
+    screenshot: '2026-09-10-ko-collective-com.webp',
+    url: 'https://ko-collective.com',
+  },
 ];
 
 export const portfolios = reverseArray(
