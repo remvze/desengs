@@ -893,6 +893,15 @@ const _resources: Resources = [
     title: 'kugiri',
     url: 'https://edoardolunardi.github.io/kugiri/',
   },
+  {
+    date: '2026-09-11',
+    description:
+      'A library of interactive UI blocks you can explore, tweak, and take straight into your projects.',
+    format: 'browse',
+    id: '',
+    title: 'Bencho',
+    url: 'https://bencho.dev/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
