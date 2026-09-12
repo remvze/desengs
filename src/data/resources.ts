@@ -910,6 +910,14 @@ const _resources: Resources = [
     title: 'A Five-Minute Guide to Better Typography',
     url: 'https://www.pierrickcalvez.com/journal/a-five-minute-guide-to-better-typography',
   },
+  {
+    date: '2026-09-12',
+    description: 'Understanding the structure of an AI input.',
+    format: 'read',
+    id: '',
+    title: 'Anatomy of AI Input',
+    url: 'https://ibelick.com/anatomy-ai-input',
+  },
 ];
 
 export const resources = reverseArray(_resources);
