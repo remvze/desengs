@@ -918,6 +918,15 @@ const _resources: Resources = [
     title: 'Anatomy of AI Input',
     url: 'https://ibelick.com/anatomy-ai-input',
   },
+  {
+    date: '2026-09-12',
+    description:
+      'Tired of Inter being everywhere? Two real criteria—cap-centered vertical metrics and a tall x-height—for choosing a UI font, plus 10 alternatives from independent foundries.',
+    format: 'read',
+    id: '',
+    title: 'Inter alternatives: How to choose a UI font',
+    url: 'https://yeptype.com/article/inter-alternatives',
+  },
 ];
 
 export const resources = reverseArray(_resources);
