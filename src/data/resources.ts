@@ -902,6 +902,14 @@ const _resources: Resources = [
     title: 'Bencho',
     url: 'https://bencho.dev/',
   },
+  {
+    date: '2026-09-12',
+    description: '',
+    format: 'read',
+    id: '',
+    title: 'A Five-Minute Guide to Better Typography',
+    url: 'https://www.pierrickcalvez.com/journal/a-five-minute-guide-to-better-typography',
+  },
 ];
 
 export const resources = reverseArray(_resources);
