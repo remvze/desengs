@@ -1252,6 +1252,27 @@ const _websites: Array<{
     screenshot: '2026-09-09-jckhlry-com.webp',
     url: 'https://jckhlry.com',
   },
+  {
+    address: 'cleonwong.com',
+    date: '2026-09-13',
+    name: 'Cleon Wong',
+    screenshot: '2026-09-13-cleonwong-com.webp',
+    url: 'https://cleonwong.com',
+  },
+  {
+    address: 'imran.studio',
+    date: '2026-09-13',
+    name: 'Imran Ashraf',
+    screenshot: '2026-09-13-imran-studio.webp',
+    url: 'https://imran.studio',
+  },
+  {
+    address: 'dogancan.dev',
+    date: '2026-09-13',
+    name: 'Dogancan Mavideniz',
+    screenshot: '2026-09-13-dogancan-dev.webp',
+    url: 'https://dogancan.dev',
+  },
 ];
 
 export const websites = reverseArray(
