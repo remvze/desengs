@@ -927,6 +927,14 @@ const _resources: Resources = [
     title: 'Inter alternatives: How to choose a UI font',
     url: 'https://yeptype.com/article/inter-alternatives',
   },
+  {
+    date: '2026-09-13',
+    description: 'As an engineer who is not a designer and hates slop.',
+    format: 'read',
+    id: '',
+    title: 'How I Design with AI',
+    url: 'https://ref.tools/blog/how-i-design-with-ai',
+  },
 ];
 
 export const resources = reverseArray(_resources);
