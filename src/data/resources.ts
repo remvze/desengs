@@ -935,6 +935,15 @@ const _resources: Resources = [
     title: 'How I Design with AI',
     url: 'https://ref.tools/blog/how-i-design-with-ai',
   },
+  {
+    date: '2026-09-14',
+    description:
+      'HTML has been gobbling up swathes of what used to be JavaScript’s remit. This page lists a bunch of dynamic functionality that we can now achieve with just HTML. ',
+    format: 'browse',
+    id: '',
+    title: 'HTML Can Do That',
+    url: 'chrisburnell.com/html-can-do-that/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
