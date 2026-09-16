@@ -938,11 +938,46 @@ const _resources: Resources = [
   {
     date: '2026-09-14',
     description:
-      'HTML has been gobbling up swathes of what used to be JavaScript’s remit. This page lists a bunch of dynamic functionality that we can now achieve with just HTML. ',
+      'HTML has been gobbling up swathes of what used to be JavaScript’s remit. This page lists a bunch of dynamic functionality that we can now achieve with just HTML.',
     format: 'browse',
     id: '',
     title: 'HTML Can Do That',
-    url: 'chrisburnell.com/html-can-do-that/',
+    url: 'https://chrisburnell.com/html-can-do-that/',
+  },
+  {
+    date: '2026-09-16',
+    description:
+      'Paste brand colors or a Figma, Tokens Studio, or DTCG export and get production-ready design tokens: semantic CSS variables with dark mode, a Tailwind v4 @theme, DTCG tokens.json, and rules your AI coding agents can follow.',
+    format: 'use',
+    id: '',
+    title: 'Design Tokens Generator',
+    url: 'https://design.dev/ai/design-tokens-generator/',
+  },
+  {
+    date: '2026-09-16',
+    description:
+      'Every detail asks for attention. Limiting how many we add is what gives us room to make the ones that remain better.',
+    format: 'read',
+    id: '',
+    title: 'Limit the number of details',
+    url: 'https://design.lightspark.com/limit-the-number-of-details',
+  },
+  {
+    date: '2026-09-16',
+    description: '',
+    format: 'learn',
+    id: '',
+    title: 'Butterick’s Practical Typography',
+    url: 'https://practicaltypography.com/',
+  },
+  {
+    date: '2026-09-16',
+    description:
+      'The musings of a designer on why he designs the way he does and what he’s learned along the journey.',
+    format: 'read',
+    id: '',
+    title: 'Lessons of Design',
+    url: 'https://lessons.design/',
   },
 ];
 
