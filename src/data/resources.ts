@@ -979,6 +979,14 @@ const _resources: Resources = [
     title: 'Lessons of Design',
     url: 'https://lessons.design/',
   },
+  {
+    date: '2026-09-20',
+    description: 'A tool to calculate perfect nested border radii.',
+    format: 'use',
+    id: '',
+    title: 'Corner Radii',
+    url: 'https://corner-radii.xyz/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
