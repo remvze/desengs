@@ -1273,6 +1273,34 @@ const _websites: Array<{
     screenshot: '2026-09-13-dogancan-dev.webp',
     url: 'https://dogancan.dev',
   },
+  {
+    address: 'sasi.codes',
+    date: '2026-09-20',
+    name: 'Sasidharan',
+    screenshot: '2026-09-20-sasi-codes.webp',
+    url: 'https://sasi.codes',
+  },
+  {
+    address: 'tohirr.dev',
+    date: '2026-09-20',
+    name: 'tohirr',
+    screenshot: '2026-09-20-tohirr-dev.webp',
+    url: 'https://tohirr.dev',
+  },
+  {
+    address: 'anmoldeep.dev',
+    date: '2026-09-20',
+    name: 'Anmoldeep Singh',
+    screenshot: '2026-09-20-anmoldeep-dev.webp',
+    url: 'https://anmoldeep.dev',
+  },
+  {
+    address: 'noq.studio',
+    date: '2026-09-20',
+    name: 'NOQ',
+    screenshot: '2026-09-20-noq-studio.webp',
+    url: 'https://noq.studio',
+  },
 ];
 
 export const websites = reverseArray(
