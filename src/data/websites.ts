@@ -886,6 +886,38 @@ const _websites: Array<{
     tags: ['dark-mode', 'portfolio', 'technology', 'personal-website'],
     url: 'https://tikhon.io',
   },
+  {
+    address: 'anuchome.com',
+    date: '2026-09-26',
+    name: 'Anuc Home',
+    screenshot: '/images/screenshots/2026-09-26-anuchome-com.webp',
+    tags: ['minimal'],
+    url: 'https://anuchome.com',
+  },
+  {
+    address: 'vault.hyperiux.com',
+    date: '2026-09-26',
+    name: 'Hyperiux Vault',
+    screenshot: '/images/screenshots/2026-09-26-vault-hyperiux-com.webp',
+    tags: ['animated', 'dark-mode'],
+    url: 'https://vault.hyperiux.com',
+  },
+  {
+    address: 'plnty.app',
+    date: '2026-09-26',
+    name: 'Plnty',
+    screenshot: '/images/screenshots/2026-09-26-plnty-app.webp',
+    tags: ['playful', 'bold', 'landing-page'],
+    url: 'https://plnty.app',
+  },
+  {
+    address: 'jackandjill.ai',
+    date: '2026-09-26',
+    name: 'Jack & Kill',
+    screenshot: '/images/screenshots/2026-09-26-jackandjill-ai.webp',
+    tags: ['minimal', 'ai-data', 'landing-page'],
+    url: 'https://jackandjill.ai',
+  },
 ];
 
 export const websites = reverseArray(
