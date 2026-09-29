@@ -987,6 +987,15 @@ const _resources: Resources = [
     title: 'Corner Radii',
     url: 'https://corner-radii.xyz/',
   },
+  {
+    date: '2026-09-29',
+    description:
+      'Free React components with animation, built with Framer Motion and Tailwind CSS. Preview them, copy the code, and add them to your site.',
+    format: 'browse',
+    id: '',
+    title: 'useLayouts',
+    url: 'https://uselayouts.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
