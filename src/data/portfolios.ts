@@ -400,6 +400,38 @@ const _portfolios: Array<Portfolio> = [
     screenshot: '2026-09-10-ko-collective-com.webp',
     url: 'https://ko-collective.com',
   },
+  {
+    address: 'goodside.studio',
+    category: 'collective',
+    date: '2026-09-29',
+    name: 'Goodside',
+    screenshot: '2026-09-29-goodside-studio.webp',
+    url: 'https://goodside.studio',
+  },
+  {
+    address: 'julienpianetti.com',
+    category: 'individual',
+    date: '2026-09-29',
+    name: 'Julien Pianetti',
+    screenshot: '2026-09-29-julienpianetti-com.webp',
+    url: 'https://julienpianetti.com',
+  },
+  {
+    address: 'this.design',
+    category: 'collective',
+    date: '2026-09-29',
+    name: 'This Design',
+    screenshot: '2026-09-29-this-design.webp',
+    url: 'https://this.design',
+  },
+  {
+    address: 'play-grounds.studio',
+    category: 'collective',
+    date: '2026-09-29',
+    name: 'Play Grounds Studio',
+    screenshot: '2026-09-29-play-grounds-studio.webp',
+    url: 'https://play-grounds.studio',
+  },
 ];
 
 export const portfolios = reverseArray(
