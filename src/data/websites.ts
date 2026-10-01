@@ -918,6 +918,38 @@ const _websites: Array<{
     tags: ['minimal', 'ai-data', 'landing-page'],
     url: 'https://jackandjill.ai',
   },
+  {
+    address: 'ploy.ai',
+    date: '2026-10-01',
+    name: 'Ploy',
+    screenshot: '/images/screenshots/2026-10-01-ploy-ai.webp',
+    tags: ['landing-page', 'ai-data', 'playful', 'bold'],
+    url: 'https://ploy.ai',
+  },
+  {
+    address: 'infinitemachine.com',
+    date: '2026-10-01',
+    name: 'Infinite Machine',
+    screenshot: '/images/screenshots/2026-10-01-infinitemachine-com.webp',
+    tags: ['automotive-transportation', 'minimal', 'landing-page'],
+    url: 'https://infinitemachine.com',
+  },
+  {
+    address: 'thedesignsociety.fr',
+    date: '2026-10-01',
+    name: 'The Design Society',
+    screenshot: '/images/screenshots/2026-10-01-thedesignsociety-fr.webp',
+    tags: ['playful', 'bold', 'typographic', 'community'],
+    url: 'https://thedesignsociety.fr',
+  },
+  {
+    address: 'trulytype.com',
+    date: '2026-10-01',
+    name: 'trulytype.com',
+    screenshot: '/images/screenshots/2026-10-01-trulytype-com.webp',
+    tags: ['minimal', 'playful'],
+    url: 'https://trulytype.com',
+  },
 ];
 
 export const websites = reverseArray(
