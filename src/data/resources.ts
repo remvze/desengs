@@ -996,6 +996,14 @@ const _resources: Resources = [
     title: 'useLayouts',
     url: 'https://uselayouts.com/',
   },
+  {
+    date: '2026-10-01',
+    description: 'A simple tool for infinite unique outputs.',
+    format: 'use',
+    id: '',
+    title: 'GRADIENTOOL',
+    url: 'https://gradientool.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
