@@ -1301,6 +1301,34 @@ const _websites: Array<{
     screenshot: '2026-09-20-noq-studio.webp',
     url: 'https://noq.studio',
   },
+  {
+    address: 'jasonyuan.design',
+    date: '2026-10-01',
+    name: 'Jason Yuan',
+    screenshot: '2026-10-01-jasonyuan-design.webp',
+    url: 'https://jasonyuan.design',
+  },
+  {
+    address: 'bobby.so',
+    date: '2026-10-01',
+    name: 'bobby giangeruso',
+    screenshot: '2026-10-01-bobby-so.webp',
+    url: 'https://bobby.so',
+  },
+  {
+    address: 'sashabalandina.com',
+    date: '2026-10-01',
+    name: 'Sasha Balandina',
+    screenshot: '2026-10-01-sashabalandina-com.webp',
+    url: 'https://sashabalandina.com',
+  },
+  {
+    address: 'julienaudiger.com',
+    date: '2026-10-01',
+    name: 'Julien Audiger',
+    screenshot: '2026-10-01-julienaudiger-com.webp',
+    url: 'https://julienaudiger.com',
+  },
 ];
 
 export const websites = reverseArray(
