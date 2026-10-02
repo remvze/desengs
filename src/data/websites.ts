@@ -950,6 +950,39 @@ const _websites: Array<{
     tags: ['minimal', 'playful'],
     url: 'https://trulytype.com',
   },
+  {
+    address: 'lemansclassic.richardmille.com',
+    date: '2026-10-02',
+    name: 'Le Mans Classic',
+    screenshot:
+      '/images/screenshots/2026-10-02-lemansclassic-richardmille-com.webp',
+    tags: ['bold', 'typographic'],
+    url: 'https://lemansclassic.richardmille.com',
+  },
+  {
+    address: 'berd.xyz',
+    date: '2026-10-02',
+    name: 'Berd',
+    screenshot: '/images/screenshots/2026-10-02-berd-xyz.webp',
+    tags: ['landing-page', 'playful', 'bold'],
+    url: 'https://berd.xyz',
+  },
+  {
+    address: 'doubleyoumanagement.net',
+    date: '2026-10-02',
+    name: 'Double You Management',
+    screenshot: '/images/screenshots/2026-10-02-doubleyoumanagement-net.webp',
+    tags: [],
+    url: 'https://doubleyoumanagement.net',
+  },
+  {
+    address: 'getgalaxy.io',
+    date: '2026-10-02',
+    name: 'Galaxy',
+    screenshot: '/images/screenshots/2026-10-02-getgalaxy-io.webp',
+    tags: ['landing-page'],
+    url: 'https://getgalaxy.io',
+  },
 ];
 
 export const websites = reverseArray(
