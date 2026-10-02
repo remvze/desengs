@@ -432,6 +432,38 @@ const _portfolios: Array<Portfolio> = [
     screenshot: '2026-09-29-play-grounds-studio.webp',
     url: 'https://play-grounds.studio',
   },
+  {
+    address: 'locomotive.ca',
+    category: 'collective',
+    date: '2026-10-02',
+    name: 'Locomotive',
+    screenshot: '2026-10-02-locomotive-ca.webp',
+    url: 'https://locomotive.ca',
+  },
+  {
+    address: 'originbrand.io',
+    category: 'collective',
+    date: '2026-10-02',
+    name: 'Origin',
+    screenshot: '2026-10-02-originbrand-io.webp',
+    url: 'https://originbrand.io',
+  },
+  {
+    address: 'maximiliankaspar.com',
+    category: 'individual',
+    date: '2026-10-02',
+    name: 'maximiliankaspar.com',
+    screenshot: '2026-10-02-maximiliankaspar-com.webp',
+    url: 'https://maximiliankaspar.com',
+  },
+  {
+    address: 'parker.studio',
+    category: 'collective',
+    date: '2026-10-02',
+    name: 'Parker Studio',
+    screenshot: '2026-10-02-parker-studio.webp',
+    url: 'https://parker.studio',
+  },
 ];
 
 export const portfolios = reverseArray(
