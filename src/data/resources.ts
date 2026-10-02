@@ -1004,6 +1004,15 @@ const _resources: Resources = [
     title: 'GRADIENTOOL',
     url: 'https://gradientool.com/',
   },
+  {
+    date: '2026-10-02',
+    description:
+      'A lightweight library full of beautiful loading indicators for React.',
+    format: 'build',
+    id: '',
+    title: 'loading.dev',
+    url: 'https://loading.dev/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
