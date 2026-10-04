@@ -1022,6 +1022,15 @@ const _resources: Resources = [
     title: 'How to scale intent, quality, and artistry with Al',
     url: 'https://www.youtube.com/watch?v=GLvFTMtw4Jk',
   },
+  {
+    date: '2026-10-04',
+    description:
+      'With AI tooling, code being the source of truth just makes sense.',
+    format: 'read',
+    id: '',
+    title: 'Code as the Source of Truth',
+    url: 'https://www.tonyward.dev/articles/code-as-the-source-of-truth',
+  },
 ];
 
 export const resources = reverseArray(_resources);
