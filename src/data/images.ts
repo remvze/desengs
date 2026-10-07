@@ -539,6 +539,58 @@ const _images: Array<{
       url: 'https://idle.space',
     },
   },
+  {
+    date: '2026-10-07',
+    dimensions: {
+      height: 1260,
+      width: 2400,
+    },
+    image: '2026-10-07-xander-xyz.webp',
+    source: {
+      address: 'xander.xyz',
+      name: 'Spencer Alexander Marsh',
+      url: 'https://xander.xyz',
+    },
+  },
+  {
+    date: '2026-10-07',
+    dimensions: {
+      height: 713,
+      width: 1361,
+    },
+    image: '2026-10-07-set-space.webp',
+    source: {
+      address: 'set.space',
+      name: 'Set Space',
+      url: 'https://set.space',
+    },
+  },
+  {
+    date: '2026-10-07',
+    dimensions: {
+      height: 1260,
+      width: 2400,
+    },
+    image: '2026-10-07-getfernand-com.webp',
+    source: {
+      address: 'getfernand.com',
+      name: 'Fernand',
+      url: 'https://getfernand.com',
+    },
+  },
+  {
+    date: '2026-10-07',
+    dimensions: {
+      height: 1260,
+      width: 2400,
+    },
+    image: '2026-10-07-darkroom-engineering.webp',
+    source: {
+      address: 'darkroom.engineering',
+      name: 'darkroom.engineering',
+      url: 'https://darkroom.engineering',
+    },
+  },
 ];
 
 export const images = reverseArray(
