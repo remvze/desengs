@@ -1329,6 +1329,34 @@ const _websites: Array<{
     screenshot: '2026-10-01-julienaudiger-com.webp',
     url: 'https://julienaudiger.com',
   },
+  {
+    address: 'stallboerger.com',
+    date: '2026-10-07',
+    name: 'anton stallbörger',
+    screenshot: '2026-10-07-stallboerger-com.webp',
+    url: 'https://stallboerger.com',
+  },
+  {
+    address: 'jib.design',
+    date: '2026-10-07',
+    name: 'JB Eudeline',
+    screenshot: '2026-10-07-jib-design.webp',
+    url: 'https://jib.design',
+  },
+  {
+    address: 'lauriparonen.com',
+    date: '2026-10-07',
+    name: 'Lauri Paronen',
+    screenshot: '2026-10-07-lauriparonen-com.webp',
+    url: 'https://lauriparonen.com',
+  },
+  {
+    address: 'karrisaarinen.com',
+    date: '2026-10-07',
+    name: 'Karri Saarinen',
+    screenshot: '2026-10-07-karrisaarinen-com.webp',
+    url: 'https://karrisaarinen.com',
+  },
 ];
 
 export const websites = reverseArray(
