@@ -591,6 +591,58 @@ const _images: Array<{
       url: 'https://darkroom.engineering',
     },
   },
+  {
+    date: '2026-10-10',
+    dimensions: {
+      height: 630,
+      width: 1200,
+    },
+    image: '2026-10-10-weav-com.webp',
+    source: {
+      address: 'weav.com',
+      name: 'Weav',
+      url: 'https://weav.com',
+    },
+  },
+  {
+    date: '2026-10-10',
+    dimensions: {
+      height: 630,
+      width: 1200,
+    },
+    image: '2026-10-10-runway-com.webp',
+    source: {
+      address: 'runway.com',
+      name: 'Runway',
+      url: 'https://runway.com',
+    },
+  },
+  {
+    date: '2026-10-10',
+    dimensions: {
+      height: 630,
+      width: 1200,
+    },
+    image: '2026-10-10-ribbit-dk.webp',
+    source: {
+      address: 'ribbit.dk',
+      name: 'Ribbit',
+      url: 'https://ribbit.dk',
+    },
+  },
+  {
+    date: '2026-10-10',
+    dimensions: {
+      height: 1260,
+      width: 2400,
+    },
+    image: '2026-10-10-brasshands-com.webp',
+    source: {
+      address: 'brasshands.com',
+      name: 'Brass Hands',
+      url: 'https://brasshands.com',
+    },
+  },
 ];
 
 export const images = reverseArray(
