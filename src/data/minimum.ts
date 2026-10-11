@@ -1357,6 +1357,34 @@ const _websites: Array<{
     screenshot: '2026-10-07-karrisaarinen-com.webp',
     url: 'https://karrisaarinen.com',
   },
+  {
+    address: 'jacob.energy',
+    date: '2026-10-11',
+    name: 'jacob',
+    screenshot: '2026-10-11-jacob-energy.webp',
+    url: 'https://jacob.energy',
+  },
+  {
+    address: 'adamwhitcroft.com',
+    date: '2026-10-11',
+    name: 'Adam Whitcroft',
+    screenshot: '2026-10-11-adamwhitcroft-com.webp',
+    url: 'https://adamwhitcroft.com',
+  },
+  {
+    address: 'jordiplz.com',
+    date: '2026-10-11',
+    name: 'Jordi Plz',
+    screenshot: '2026-10-11-jordiplz-com.webp',
+    url: 'https://jordiplz.com',
+  },
+  {
+    address: 'itaydreyfus.com',
+    date: '2026-10-11',
+    name: 'Itay Dreyfus',
+    screenshot: '2026-10-11-itaydreyfus-com.webp',
+    url: 'https://itaydreyfus.com',
+  },
 ];
 
 export const websites = reverseArray(
