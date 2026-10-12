@@ -1039,6 +1039,14 @@ const _resources: Resources = [
     title: 'The Age of the Soft Skill',
     url: 'https://rudyfaile.com/2026/09/24/the-age-of-the-soft-skill/',
   },
+  {
+    date: '2026-10-13',
+    description: 'A collection of design engineering concepts.',
+    format: 'browse',
+    id: '',
+    title: 'Craft',
+    url: 'https://craft.gustavofior.com/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
