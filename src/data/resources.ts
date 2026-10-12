@@ -1031,6 +1031,14 @@ const _resources: Resources = [
     title: 'Code as the Source of Truth',
     url: 'https://www.tonyward.dev/articles/code-as-the-source-of-truth',
   },
+  {
+    date: '2026-10-13',
+    description: '',
+    format: 'read',
+    id: '',
+    title: 'The Age of the Soft Skill',
+    url: 'https://rudyfaile.com/2026/09/24/the-age-of-the-soft-skill/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
