@@ -464,6 +464,38 @@ const _portfolios: Array<Portfolio> = [
     screenshot: '2026-10-02-parker-studio.webp',
     url: 'https://parker.studio',
   },
+  {
+    address: 'cactusdigitale.com',
+    category: 'collective',
+    date: '2026-10-15',
+    name: 'CACTUS DIGITALE',
+    screenshot: '2026-10-15-cactusdigitale-com.webp',
+    url: 'https://cactusdigitale.com',
+  },
+  {
+    address: 'zauberbergproductions.com',
+    category: 'collective',
+    date: '2026-10-15',
+    name: 'Zauberberg',
+    screenshot: '2026-10-15-zauberbergproductions-com.webp',
+    url: 'https://zauberbergproductions.com',
+  },
+  {
+    address: 'mg-tucker.com',
+    category: 'individual',
+    date: '2026-10-15',
+    name: 'M.G. Tucker',
+    screenshot: '2026-10-15-mg-tucker-com.webp',
+    url: 'https://mg-tucker.com',
+  },
+  {
+    address: 'yuriroga.com',
+    category: 'individual',
+    date: '2026-10-15',
+    name: 'Yuri Roga',
+    screenshot: '2026-10-15-yuriroga-com.webp',
+    url: 'https://yuriroga.com',
+  },
 ];
 
 export const portfolios = reverseArray(
