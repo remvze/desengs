@@ -1047,6 +1047,24 @@ const _resources: Resources = [
     title: 'Craft',
     url: 'https://craft.gustavofior.com/',
   },
+  {
+    date: '2026-10-17',
+    description:
+      'A curated list of web design inspiration directories, free to explore with no paywall or account, ranked by the people who use them.',
+    format: 'browse',
+    id: '',
+    title: 'mkdir',
+    url: 'https://mkdir.directory/',
+  },
+  {
+    date: '2026-10-17',
+    description:
+      'A curated collection of interface craft, component libraries, AI tools, and resources for builders.',
+    format: 'browse',
+    id: '',
+    title: 'Designeer',
+    url: 'https://designeer.xyz/',
+  },
 ];
 
 export const resources = reverseArray(_resources);
