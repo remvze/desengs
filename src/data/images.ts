@@ -643,6 +643,58 @@ const _images: Array<{
       url: 'https://brasshands.com',
     },
   },
+  {
+    date: '2026-10-17',
+    dimensions: {
+      height: 630,
+      width: 1200,
+    },
+    image: '2026-10-17-wastetide-ai.webp',
+    source: {
+      address: 'wastetide.ai',
+      name: 'Wastetide',
+      url: 'https://wastetide.ai',
+    },
+  },
+  {
+    date: '2026-10-17',
+    dimensions: {
+      height: 1260,
+      width: 2400,
+    },
+    image: '2026-10-17-ramp-com.webp',
+    source: {
+      address: 'ramp.com',
+      name: 'Ramp',
+      url: 'https://ramp.com',
+    },
+  },
+  {
+    date: '2026-10-17',
+    dimensions: {
+      height: 630,
+      width: 1200,
+    },
+    image: '2026-10-17-ascension-pegassi-be.webp',
+    source: {
+      address: 'ascension.pegassi.be',
+      name: 'Ascension',
+      url: 'https://ascension.pegassi.be',
+    },
+  },
+  {
+    date: '2026-10-17',
+    dimensions: {
+      height: 630,
+      width: 1200,
+    },
+    image: '2026-10-17-ankar-ai.webp',
+    source: {
+      address: 'ankar.ai',
+      name: 'Ankar',
+      url: 'https://ankar.ai',
+    },
+  },
 ];
 
 export const images = reverseArray(
