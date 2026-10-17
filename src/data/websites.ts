@@ -983,6 +983,38 @@ const _websites: Array<{
     tags: ['landing-page'],
     url: 'https://getgalaxy.io',
   },
+  {
+    address: 'steel.dev',
+    date: '2026-10-17',
+    name: 'Steel',
+    screenshot: '/images/screenshots/2026-10-17-steel-dev.webp',
+    tags: ['ai-data', 'landing-page'],
+    url: 'https://steel.dev',
+  },
+  {
+    address: 'ferio.so',
+    date: '2026-10-17',
+    name: 'Ferio',
+    screenshot: '/images/screenshots/2026-10-17-ferio-so.webp',
+    tags: ['landing-page', 'ai-data'],
+    url: 'https://ferio.so',
+  },
+  {
+    address: 'biotic.org',
+    date: '2026-10-17',
+    name: 'Biotic',
+    screenshot: '/images/screenshots/2026-10-17-biotic-org.webp',
+    tags: ['landing-page', 'science-environment'],
+    url: 'https://biotic.org',
+  },
+  {
+    address: 'terms.so',
+    date: '2026-10-17',
+    name: 'Terms.so',
+    screenshot: '/images/screenshots/2026-10-17-terms-so.webp',
+    tags: ['landing-page', 'ai-data'],
+    url: 'https://terms.so',
+  },
 ];
 
 export const websites = reverseArray(
