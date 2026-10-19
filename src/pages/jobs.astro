@@ -4,6 +4,7 @@ import { IoIosArrowRoundBack } from 'react-icons/io';
 import { Container } from '@/components/container';
 import Footer from '@/components/footer.astro';
 import { ShinyText } from '@/components/shiny-text';
+import { Sponsors } from '@/components/sponsors';
 import Spacer from '@/components/spacer.astro';
 import { jobs } from '@/data/jobs';
 import { reverseArray } from '@/helpers/array';
@@ -34,6 +35,9 @@ const formatDate = (date: string) =>
         > job.
       </h1>
       <p>Curated jobs across design and code.</p>
+      <Sponsors client:only="react">
+        <div class="cover" slot="fallback"></div>
+      </Sponsors>
     </section>
 
     <section aria-label="Jobs" class="jobs">
@@ -89,6 +93,13 @@ const formatDate = (date: string) =>
 </Layout>
 
 <style>
+  .cover {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: var(--color-neutral-50);
+  }
+
   .hero {
     padding: 120px 0 60px;
   }
