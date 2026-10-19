@@ -1,0 +1,259 @@
+---
+import { IoIosArrowRoundBack } from 'react-icons/io';
+
+import { Container } from '@/components/container';
+import Footer from '@/components/footer.astro';
+import { ShinyText } from '@/components/shiny-text';
+import Spacer from '@/components/spacer.astro';
+import { jobs } from '@/data/jobs';
+import { reverseArray } from '@/helpers/array';
+import Layout from '@/layouts/layout.astro';
+
+const displayedJobs = reverseArray(jobs);
+
+const formatDate = (date: string) =>
+  new Intl.DateTimeFormat('en-US', {
+    day: 'numeric',
+    month: 'short',
+    timeZone: 'UTC',
+    year: 'numeric',
+  }).format(new Date(`${date}T00:00:00Z`));
+---
+
+<Layout
+  description="Explore curated design engineering jobs and opportunities at the intersection of design and code."
+  title="Design Engineering Jobs"
+>
+  <Container>
+    <section class="hero">
+      <a aria-label="Back to home" class="back" href="/">
+        <IoIosArrowRoundBack />
+      </a>
+      <h1>
+        Find your <i>next</i><br />Design <i><ShinyText text="Engineering" /></i
+        > job.
+      </h1>
+      <p>Curated jobs across design and code.</p>
+    </section>
+
+    <section aria-label="Jobs" class="jobs">
+      <ul>
+        {
+          displayedJobs.map(job => (
+            <li>
+              <div class="details">
+                <h3>
+                  <a href={job.url} rel="noopener noreferrer" target="_blank">
+                    {job.title}
+                  </a>
+                </h3>
+                <p class="meta">
+                  <span class="company">{job.company}</span>
+                  <span aria-hidden="true" class="separator">
+                    ·
+                  </span>
+                  <span class="location">
+                    {[job.workArrangement, job.location, job.employmentType]
+                      .filter(Boolean)
+                      .join(' · ') || 'See listing for location'}
+                  </span>
+                </p>
+                {job.compensation && (
+                  <p class="compensation">{job.compensation}</p>
+                )}
+              </div>
+              <div class="actions">
+                <a
+                  aria-label={`Apply for ${job.title} at ${job.company}`}
+                  class="apply"
+                  href={job.url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Apply <span aria-hidden="true">↗</span>
+                </a>
+                <p class="date">
+                  Added{' '}
+                  <time datetime={job.addedAt}>{formatDate(job.addedAt)}</time>
+                </p>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <Spacer />
+    <Footer />
+  </Container>
+</Layout>
+
+<style>
+  .hero {
+    padding: 120px 0 60px;
+  }
+
+  .back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 32px;
+    color: var(--color-foreground);
+    background: var(--color-neutral-100);
+    border-radius: 50%;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: var(--font-2xlg);
+    line-height: 1.2;
+  }
+
+  i {
+    font-style: italic;
+  }
+
+  .hero p {
+    margin-top: 20px;
+    line-height: 1.5;
+    color: var(--color-foreground-subtle);
+  }
+
+  .jobs {
+    margin-bottom: 50px;
+  }
+
+  .date {
+    font-family: var(--font-mono);
+    font-size: var(--font-2xsm);
+    color: var(--color-foreground-subtler);
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-top: 1px solid var(--color-neutral-200);
+  }
+
+  li:first-child {
+    border-top: none;
+  }
+
+  .details {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  h3 {
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  h3 a {
+    color: var(--color-foreground);
+    text-decoration: none;
+  }
+
+  h3 a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--color-foreground-subtler);
+    text-underline-offset: 4px;
+  }
+
+  .meta,
+  .compensation {
+    margin-top: 4px;
+    font-size: var(--font-xsm);
+    line-height: 1.5;
+    color: var(--color-foreground-subtle);
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 8px;
+  }
+
+  .company {
+    color: var(--color-foreground);
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 6px;
+    align-items: flex-end;
+  }
+
+  .apply {
+    display: inline-flex;
+    flex-shrink: 0;
+    gap: 8px;
+    align-items: center;
+    padding: 4px 0;
+    font-size: var(--font-xsm);
+    color: var(--color-foreground-subtle);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .apply:hover {
+    color: var(--color-foreground);
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--color-foreground);
+    outline-offset: 4px;
+  }
+
+  @media (width <= 480px) {
+    .hero {
+      padding: 80px 0 40px;
+    }
+
+    li {
+      flex-direction: column;
+      gap: 8px;
+      align-items: stretch;
+    }
+
+    .meta {
+      gap: 2px 8px;
+    }
+
+    .separator {
+      display: none;
+    }
+
+    .location {
+      flex-basis: 100%;
+    }
+
+    .actions {
+      flex-flow: row-reverse wrap;
+      gap: 4px 16px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .apply {
+      min-height: 44px;
+      padding: 8px;
+      margin-right: -8px;
+    }
+  }
+</style>
