@@ -83,4 +83,13 @@ export const jobs: Job[] = [
     url: 'https://www.tryprofound.com/careers/e98d1d1d-aeec-4b8d-aef8-ea9b61546639',
     workArrangement: 'On-site',
   },
+  {
+    addedAt: '2026-10-20',
+    company: 'Nord Security',
+    employmentType: 'Full-time',
+    location: 'Poland',
+    title: 'Design Engineer · Mid-Senior',
+    url: 'https://nordsecurity.com/careers/d9da600d-43b4-43f3-af47-d854c5eb508c/',
+    workArrangement: 'Remote',
+  },
 ];
