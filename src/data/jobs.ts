@@ -73,4 +73,14 @@ export const jobs: Job[] = [
     url: 'https://job-boards.greenhouse.io/vercel/jobs/6129441004',
     workArrangement: 'Remote',
   },
+  {
+    addedAt: '2026-10-20',
+    company: 'Profound',
+    compensation: '$120K – $250K (NYC)',
+    employmentType: 'Full-time',
+    location: 'NYC or Buenos Aires Office',
+    title: 'Member of Technical Staff, Design Engineer',
+    url: 'https://www.tryprofound.com/careers/e98d1d1d-aeec-4b8d-aef8-ea9b61546639',
+    workArrangement: 'On-site',
+  },
 ];
