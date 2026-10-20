@@ -1065,6 +1065,24 @@ const _resources: Resources = [
     title: 'Designeer',
     url: 'https://designeer.xyz/',
   },
+  {
+    date: '2026-10-20',
+    description:
+      'What can everyone else learn from designers and design engineers?',
+    format: 'watch',
+    id: '',
+    title: 'Design Engineering with Maggie Appleton',
+    url: 'https://www.youtube.com/watch?v=KZSzF0KEFRg',
+  },
+  {
+    date: '2026-10-20',
+    description: 'Good design emits as little light as possible.',
+    format: 'watch',
+    id: '',
+    title:
+      'In praise of dark mode ft. Mehmet Aydın Baytaş (Attio) | Config 2026',
+    url: 'https://www.youtube.com/watch?v=cWggqwauYXQ',
+  },
 ];
 
 export const resources = reverseArray(_resources);
