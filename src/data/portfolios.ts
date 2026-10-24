@@ -496,6 +496,38 @@ const _portfolios: Array<Portfolio> = [
     screenshot: '2026-10-15-yuriroga-com.webp',
     url: 'https://yuriroga.com',
   },
+  {
+    address: 'revelatio.studio',
+    category: 'collective',
+    date: '2026-10-24',
+    name: 'Revelatio',
+    screenshot: '2026-10-24-revelatio-studio.webp',
+    url: 'https://revelatio.studio',
+  },
+  {
+    address: 'lambert-lambert.com',
+    category: 'collective',
+    date: '2026-10-24',
+    name: 'Lambert | Lambert',
+    screenshot: '2026-10-24-lambert-lambert-com.webp',
+    url: 'https://lambert-lambert.com',
+  },
+  {
+    address: 'studiodialect.com',
+    category: 'collective',
+    date: '2026-10-24',
+    name: 'Studio Dialect',
+    screenshot: '2026-10-24-studiodialect-com.webp',
+    url: 'https://studiodialect.com',
+  },
+  {
+    address: 'azionepr.com',
+    category: 'collective',
+    date: '2026-10-24',
+    name: 'Azione',
+    screenshot: '2026-10-24-azionepr-com.webp',
+    url: 'https://azionepr.com',
+  },
 ];
 
 export const portfolios = reverseArray(
