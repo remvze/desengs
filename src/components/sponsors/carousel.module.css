@@ -1,0 +1,117 @@
+.carousel {
+  position: fixed;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  left: 50%;
+  z-index: 100;
+  width: min(360px, calc(100vw - 32px));
+  padding: 8px 10px;
+  color: var(--color-foreground);
+  background: var(--color-neutral-50);
+  border: 1px solid var(--color-neutral-200);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 20%);
+  transform: translateX(-50%);
+}
+
+.label {
+  margin-right: auto;
+  font-size: var(--font-2xsm);
+  color: var(--color-foreground-subtler);
+}
+
+.sponsor {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 52px;
+  padding: 4px;
+  font-size: var(--font-xsm);
+  line-height: 1.5;
+  color: var(--color-foreground);
+  text-decoration: none;
+  border-radius: 6px;
+
+  & img {
+    flex-shrink: 0;
+    border: 1px solid var(--color-neutral-200);
+    border-radius: 8px;
+  }
+
+  & svg {
+    flex-shrink: 0;
+    color: var(--color-foreground-subtle);
+  }
+
+  &:hover {
+    background: var(--color-neutral-100);
+  }
+}
+
+.copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.description {
+  font-size: var(--font-2xsm);
+  color: var(--color-foreground-subtle);
+}
+
+.controls {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  padding: 2px 4px 0;
+
+  & button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    color: var(--color-foreground-subtle);
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    border-radius: 6px;
+
+    &:hover {
+      color: var(--color-foreground);
+      background: var(--color-neutral-100);
+    }
+  }
+}
+
+.positions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  & button {
+    width: 20px;
+
+    & span {
+      width: 5px;
+      height: 5px;
+      background: var(--color-neutral-400);
+      border-radius: 50%;
+    }
+
+    &[aria-current='true'] span {
+      background: var(--color-foreground);
+    }
+  }
+}
+
+.carousel a:focus-visible,
+.carousel button:focus-visible {
+  outline: 2px solid var(--color-foreground);
+  outline-offset: 2px;
+}

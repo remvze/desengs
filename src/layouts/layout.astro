@@ -1,6 +1,7 @@
 ---
 import '@/styles/global.css';
 import { SEO } from 'astro-seo';
+import Footer from '@/components/footer.astro';
 
 interface Props {
   description?: string;
@@ -52,6 +53,11 @@ const globalSchemas = Astro.props.noindex
       },
     ];
 const schemas = [...globalSchemas, ...(Astro.props.schemas || [])];
+const pathname = Astro.url.pathname.replace(/\/$/, '');
+const showFooter =
+  pathname !== '/inspiration/serendipity' &&
+  pathname !== '/dsgnrs' &&
+  !pathname.startsWith('/dsgnrs/');
 ---
 
 <!doctype html>
@@ -113,5 +119,6 @@ const schemas = [...globalSchemas, ...(Astro.props.schemas || [])];
   </head>
   <body>
     <slot />
+    {showFooter && <Footer />}
   </body>
 </html>

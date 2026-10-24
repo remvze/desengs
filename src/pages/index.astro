@@ -5,7 +5,6 @@ import Hero from '@/components/hero.astro';
 import { Resources } from '@/components/resources';
 import { resources } from '@/data/resources';
 import Spacer from '@/components/spacer.astro';
-import Footer from '@/components/footer.astro';
 
 const schemas = [
   {
@@ -37,7 +36,5 @@ const schemas = [
   <Container>
     <Spacer />
     <Resources client:load resources={resources} />
-    <Spacer />
-    <Footer />
   </Container>
 </Layout>

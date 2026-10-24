@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 
 import styles from './sponsors.module.css';
 import { cn } from '@/helpers/styles';
+import { shuffle } from '@/helpers/random';
 
 export const sponsors = [
   {
@@ -97,6 +98,7 @@ function SponsorLink({ sponsor }: { sponsor: Sponsor }) {
 }
 
 export function Sponsors() {
+  const [orderedSponsors] = useState(() => shuffle(sponsors));
   const [view, setView] = useState<View>(() => {
     const storedView = window.localStorage.getItem(VIEW_STORAGE_KEY);
 
@@ -140,7 +142,7 @@ export function Sponsors() {
 
       {view === 'rows' && (
         <ul className={styles.items}>
-          {sponsors.map(sponsor => (
+          {orderedSponsors.map(sponsor => (
             <li key={sponsor.name}>
               <a href={sponsor.url} rel="noreferrer" target="_blank">
                 <img alt={sponsor.alt} src={sponsor.logo} />
@@ -159,7 +161,7 @@ export function Sponsors() {
       {view === 'columns' && (
         <Tooltip.Provider delay={0}>
           <ul className={styles.columns}>
-            {sponsors.map(sponsor => (
+            {orderedSponsors.map(sponsor => (
               <li key={sponsor.name}>
                 <SponsorLink sponsor={sponsor} />
               </li>

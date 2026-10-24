@@ -2,10 +2,8 @@
 import { IoIosArrowRoundBack } from 'react-icons/io';
 
 import { Container } from '@/components/container';
-import Footer from '@/components/footer.astro';
 import { ShinyText } from '@/components/shiny-text';
 import { Sponsors } from '@/components/sponsors';
-import Spacer from '@/components/spacer.astro';
 import { jobs } from '@/data/jobs';
 import { reverseArray } from '@/helpers/array';
 import Layout from '@/layouts/layout.astro';
@@ -86,9 +84,6 @@ const formatDate = (date: string) =>
         }
       </ul>
     </section>
-
-    <Spacer />
-    <Footer />
   </Container>
 </Layout>
 

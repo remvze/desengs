@@ -1,14 +1,25 @@
+---
+import { Container } from './container';
+import Spacer from './spacer.astro';
+import { SponsorCarousel } from './sponsors/carousel';
+---
+
 <footer class="footer">
-  <p class="curator">
-    <span>—</span> Curated by <a href="https://x.com/remvze">Maze Heart</a>
-  </p>
+  <Container>
+    <Spacer />
+    <p class="curator">
+      <span>—</span> Curated by <a href="https://x.com/remvze">Maze Heart</a>
+    </p>
+  </Container>
+  <SponsorCarousel client:load />
 </footer>
 
 <style>
   .footer {
-    padding: 50px 0;
+    padding-bottom: calc(150px + env(safe-area-inset-bottom));
 
     & .curator {
+      padding-top: 24px;
       font-family: var(--font-mono);
       font-size: var(--font-2xsm);
       font-weight: 500;

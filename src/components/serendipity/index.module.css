@@ -101,7 +101,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (width <= 640px) {
   .header {
     top: 8px;
     left: 8px;

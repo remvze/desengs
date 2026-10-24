@@ -1,3 +1,4 @@
+import { useSponsorCards } from '../sponsors/gallery';
 import Masonry from 'react-masonry-css';
 
 import { images } from '@/data/images';
@@ -5,6 +6,8 @@ import { images } from '@/data/images';
 import styles from './images.module.css';
 
 export function Images() {
+  const insertSponsors = useSponsorCards();
+
   return (
     <section className={styles.images}>
       <Masonry
@@ -12,31 +15,36 @@ export function Images() {
         className={styles.masonry}
         columnClassName={styles.column}
       >
-        {images.map(image => (
-          <div className={styles.og} key={image.slug}>
-            <a className={styles.image} href={`/inspiration/og/${image.slug}`}>
-              <img
-                alt={`OG of ${image.source.name}`}
-                height={image.dimensions.height}
-                loading="lazy"
-                src={image.image}
-                width={image.dimensions.width}
-              />
-            </a>
-
-            <div className={styles.details}>
-              <p>{image.source.name}</p>
+        {insertSponsors(
+          images.map(image => (
+            <div className={styles.og} key={image.slug}>
               <a
-                className={styles.link}
-                href={image.source.url}
-                rel="noreferrer"
-                target="_blank"
+                className={styles.image}
+                href={`/inspiration/og/${image.slug}`}
               >
-                {image.source.address}
+                <img
+                  alt={`OG of ${image.source.name}`}
+                  height={image.dimensions.height}
+                  loading="lazy"
+                  src={image.image}
+                  width={image.dimensions.width}
+                />
               </a>
+
+              <div className={styles.details}>
+                <p>{image.source.name}</p>
+                <a
+                  className={styles.link}
+                  href={image.source.url}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {image.source.address}
+                </a>
+              </div>
             </div>
-          </div>
-        ))}
+          )),
+        )}
       </Masonry>
     </section>
   );

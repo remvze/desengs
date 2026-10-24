@@ -1,18 +1,24 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import styles from './app.module.css';
-import { pick } from '@/helpers/random';
+import { pick, shuffle } from '@/helpers/random';
 import { Container } from '../container';
 import { cn } from '@/helpers/styles';
 import { x as designers } from '@/data/designers';
 import { sponsors } from '../sponsors';
 
 export function App() {
+  const [orderedSponsors, setOrderedSponsors] = useState(sponsors);
+
+  useEffect(() => {
+    setOrderedSponsors(shuffle(sponsors));
+  }, []);
+
   return (
     <div className={styles.app}>
       <div className={styles.sponsors}>
-        {sponsors.map(sponsor => (
+        {orderedSponsors.map(sponsor => (
           <a
             href={sponsor.url}
             key={sponsor.url}

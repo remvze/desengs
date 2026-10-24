@@ -6,12 +6,6 @@ import { useMemo, useState } from 'react';
 import { cn } from '@/helpers/styles';
 import { formatDate } from '@/helpers/date';
 import { pick } from '@/helpers/random';
-import {
-  motion,
-  useMotionValue,
-  useReducedMotion,
-  useSpring,
-} from 'motion/react';
 
 interface ResourcesProps {
   resources: Resources;
@@ -21,12 +15,6 @@ export function Resources({ resources }: ResourcesProps) {
   const [filters, setFilters] = useState<Format[]>([]);
   const [query, setQuery] = useState('');
   const [value, setValue] = useState('');
-  const prefersReducedMotion = useReducedMotion();
-  const magneticX = useMotionValue(0);
-  const magneticY = useMotionValue(0);
-  const x = useSpring(magneticX, { damping: 22, stiffness: 350 });
-  const y = useSpring(magneticY, { damping: 22, stiffness: 350 });
-
   const filtered = useMemo(() => {
     if (!query.trim() && filters.length === 0) {
       return resources;
@@ -90,6 +78,18 @@ export function Resources({ resources }: ResourcesProps) {
             </button>
           ))}
           <button
+            disabled={resources.length === 0}
+            type="button"
+            onClick={() => {
+              const randomResource = pick(resources);
+
+              window.location.href = randomResource.url;
+            }}
+          >
+            <div className={styles.color} style={{ background: '#fff' }} />
+            <span>Random</span>
+          </button>
+          <button
             disabled={filters.length === 0 && query.trim().length === 0}
             onClick={() => {
               setFilters([]);
@@ -126,37 +126,6 @@ export function Resources({ resources }: ResourcesProps) {
           <p className={styles.notFound}>No resources were found.</p>
         )}
       </section>
-
-      <div className={styles.randomButtonPosition}>
-        <motion.button
-          className={styles.randomButton}
-          style={{ x, y }}
-          type="button"
-          whileTap={{ scale: 0.97 }}
-          onClick={() => {
-            const randomResource = pick(resources);
-
-            window.location.href = randomResource.url;
-          }}
-          onPointerLeave={() => {
-            magneticX.set(0);
-            magneticY.set(0);
-          }}
-          onPointerMove={event => {
-            if (prefersReducedMotion || event.pointerType === 'touch') return;
-
-            const bounds = event.currentTarget.getBoundingClientRect();
-            magneticX.set(
-              (event.clientX - (bounds.left + bounds.width / 2)) * 0.35,
-            );
-            magneticY.set(
-              (event.clientY - (bounds.top + bounds.height / 2)) * 0.35,
-            );
-          }}
-        >
-          Random Resource!
-        </motion.button>
-      </div>
     </>
   );
 }
