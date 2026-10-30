@@ -27,12 +27,6 @@ export const sponsors = [
     url: 'https://curation.systems/s/pro-reactbits-dev',
   },
   {
-    alt: 'Details Logo',
-    logo: '/sponsors/details-logo.svg',
-    name: 'Details: Give Your AI Taste',
-    url: 'https://curation.systems/s/details-so',
-  },
-  {
     alt: 'Indent Logo',
     logo: '/sponsors/indent-logo.svg',
     name: 'Indent: Your AI Coworker',
