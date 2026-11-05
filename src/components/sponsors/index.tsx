@@ -32,6 +32,12 @@ export const sponsors = [
     name: 'Indent: Your AI Coworker',
     url: 'https://curation.systems/s/indent-com',
   },
+  {
+    alt: 'Shape Logo',
+    logo: '/sponsors/shapefs-logo.svg',
+    name: 'Shape: Files for AI Agents',
+    url: 'https://curation.systems/s/shapefs-com',
+  },
 ];
 
 type Sponsor = (typeof sponsors)[number];
