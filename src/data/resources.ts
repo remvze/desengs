@@ -1083,6 +1083,15 @@ const _resources: Resources = [
       'In praise of dark mode ft. Mehmet Aydın Baytaş (Attio) | Config 2026',
     url: 'https://www.youtube.com/watch?v=cWggqwauYXQ',
   },
+  {
+    date: '2026-11-05',
+    description:
+      'Explore interactive UI microinteractions with live demos, timing notes, accessibility considerations, and copyable HTML, CSS, and JavaScript.',
+    format: 'browse',
+    id: '',
+    title: 'Microinteractions',
+    url: 'https://microinteractions.dev',
+  },
 ];
 
 export const resources = reverseArray(_resources);
