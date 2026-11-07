@@ -1413,6 +1413,34 @@ const _websites: Array<{
     screenshot: '2026-11-02-vladmoroz-com.webp',
     url: 'https://vladmoroz.com',
   },
+  {
+    address: 'linus.systems',
+    date: '2026-11-07',
+    name: 'Linus Lehbrink',
+    screenshot: '2026-11-07-linus-systems.webp',
+    url: 'https://linus.systems',
+  },
+  {
+    address: 'jame.es',
+    date: '2026-11-07',
+    name: 'James Bedford',
+    screenshot: '2026-11-07-jame-es.webp',
+    url: 'https://jame.es',
+  },
+  {
+    address: 'danielrfarrell.com',
+    date: '2026-11-07',
+    name: 'Daniel R Farrell',
+    screenshot: '2026-11-07-danielrfarrell-com.webp',
+    url: 'https://danielrfarrell.com',
+  },
+  {
+    address: 'pdepablo.com',
+    date: '2026-11-07',
+    name: 'Pablo González',
+    screenshot: '2026-11-07-pdepablo-com.webp',
+    url: 'https://pdepablo.com',
+  },
 ];
 
 export const websites = reverseArray(
